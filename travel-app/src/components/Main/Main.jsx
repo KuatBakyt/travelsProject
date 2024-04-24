@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../allcss/main.css'
-import Items from '../Items/Items'
 import Support from '../Support/Support'
+import ItemsContainer from '../Items/ItemsContainer'
 
 function Main() {
   return (
@@ -29,7 +29,7 @@ function Main() {
         <img src="../img/search.png" alt="" />
         <input type="text" placeholder='Поиск туров...' />
       </div>
-      <Items />
+      <ItemsContainer />
       <Support />
     </div>
 
