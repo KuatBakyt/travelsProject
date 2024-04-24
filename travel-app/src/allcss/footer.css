@@ -1,0 +1,60 @@
+.footer-main {
+    width: 100%;
+    padding: 26px 0;
+}
+
+footer {
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #FF7A00
+}
+
+footer .logo {
+    margin-bottom: 30px;
+}
+
+footer h5 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+footer div a {
+    text-decoration: none;
+    color: #000000;
+}
+
+footer div p {
+    font-size: 18px;
+    max-width: 230px;
+}
+
+.call a{
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.social-sets {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 20px;
+    max-width: 180px;
+}
+
+@media screen and (max-width: 600px) {
+   .support{
+    margin: 30px 0;
+   }
+}
