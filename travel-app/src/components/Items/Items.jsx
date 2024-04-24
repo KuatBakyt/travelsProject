@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from './Item/Item'
+import "../../allcss/items.css"
 
 function Items() {
     let arr = [
