@@ -2,6 +2,7 @@
     width: 100%;
     background: #ffffff;
     position: fixed;
+    z-index: 5000;
 }
 
 header {
