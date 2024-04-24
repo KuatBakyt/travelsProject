@@ -3,7 +3,7 @@
 }
 
 header {
-    margin: 26px 20px;
+    margin: 0 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
