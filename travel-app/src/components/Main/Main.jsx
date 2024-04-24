@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../allcss/main.css'
 import Items from '../Items/Items'
+import Support from '../Support/Support'
 
 function Main() {
   return (
@@ -25,10 +26,11 @@ function Main() {
         </div>
       </div>
       <div className='search-item'>
-          <img src="../img/search.png" alt="" />
-          <input type="text" placeholder='Поиск туров...'/>
+        <img src="../img/search.png" alt="" />
+        <input type="text" placeholder='Поиск туров...' />
       </div>
-    <Items />
+      <Items />
+      <Support />
     </div>
 
   )
