@@ -7,11 +7,15 @@ import AboutUs from './components/AboutUs/AboutUs';
 import News from './components/News/News'
 import Comments from './components/Comments/Comments'
 import Contacts from './components/Contacts/Contacts'
+import Headroom from 'react-headroom';
 
 function App() {
   return (
     <div>
+      <Headroom>
       <Header />
+      </Headroom>
+     
       <div className='section'>
       <Routes>
       <Route path='/' element={<Main />}/>
