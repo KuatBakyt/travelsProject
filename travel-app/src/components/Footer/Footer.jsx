@@ -11,9 +11,10 @@ function Footer() {
                         <div>
                             <h5>Мы в социальных сетях:</h5>
                             <div className='social-sets'>
-                                <a href="#"><img src="../img/twitter.png" alt="twitter" /></a>
+                                {/* <a href="#"><img src="../img/twitter.png" alt="twitter" /></a>
                                 <a href="#"><img src="../img/insta.png" alt="insta" /></a>
-                                <a href="#"> <img src="../img/facebook.png" alt="facebook" /></a>
+                                <a href="#"> <img src="../img/facebook.png" alt="facebook" /></a> */}
+                                <h2>Changes</h2>
                             </div>
                         </div>
                     </div>
