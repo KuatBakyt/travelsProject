@@ -2,7 +2,7 @@ const SET_TOURS = "SET_TOURS"
 const CHOOSE_CATEGORY = "CHOOSE_CATEGORY"
 
 let initialState = {
-    tours_Data: [
+    toursData: [
         // {
         //     name: "Экскурсия по городу Алматы и урочищу Медео",
         //     city: "Алматы",
@@ -84,31 +84,31 @@ let initialState = {
         //     id: 8
         // }
     ],
-    currentTourse: [],
+    currentTourse: []
 }
 
 const toursReducer = (state = initialState, action) => {
-    state.currentTourse = state.tours_Data
+    state.currentTourse = state.toursData
     switch (action.type) {
         case CHOOSE_CATEGORY: {
-            console.log(state.currentTourse);
-            if(action.category === "all"){
-                return{
+            if (action.category === "all") {
+                return {
                     ...state,
-                    currentTourse: state.tours_Data
+                    currentTourse: state.toursData
                 }
             }
-            state.currentTourse = state.tours_Data.filter(c => c.category === action.category);
+            state.currentTourse = state.toursData.filter(c => c.category === action.category);
             console.log(state.currentTourse);
-         }
-         return {
-            ...state,
-            currentTourse: state.currentTourse
-         }
+
+            return {
+                ...state,
+                currentTourse: state.currentTourse
+            }
+        }
         case SET_TOURS: {
             return {
                 ...state,
-                tours_Data: action.tours_Data
+                toursData: action.toursData
             }
         }
         default:
@@ -116,12 +116,14 @@ const toursReducer = (state = initialState, action) => {
     }
 }
 
-export const setToursAcCr = (tours_Data) => {
-    return { type: SET_TOURS, tours_Data: tours_Data }
-}
+
 
 export const chooseCategoryAcCr = (category) => {
     return { type: CHOOSE_CATEGORY, category: category }
+}
+
+export const setToursAcCr = (toursData) => {
+    return { type: SET_TOURS, toursData: toursData }
 }
 
 export default toursReducer;

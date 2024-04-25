@@ -6,7 +6,7 @@ import withAuthRedirect from "../HOC/withAuthTedirect"
 
 const ItemsContainer = (props) => {
     useEffect(()=>{
-        fetch("http://localhost:8080/tours_Data")
+        fetch("http://localhost:8080/toursData")
           .then((response) => {
     
             if (!response.ok) {
@@ -33,8 +33,8 @@ let MapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        setTours: (tours_Data) =>{
-            dispatch(setToursAcCr(tours_Data));
+        setTours: (toursData) =>{
+            dispatch(setToursAcCr(toursData));
         },
         
     }
