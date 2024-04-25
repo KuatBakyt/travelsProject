@@ -25,7 +25,6 @@
     padding: 22px 25px;
     background: #ffffff;
     position: absolute;
-    z-index: 50;
 }
 
 .item-info h3 {
@@ -67,7 +66,6 @@
 
 .count-stars {
     position: absolute;
-    z-index: 51;
     top: 2%;
     left: 2%;
     color: #eaff01;
@@ -75,7 +73,6 @@
 
 .discount {
     position: absolute;
-    z-index: 51;
     right: 0;
     border-radius: 0 10px 0 10px;
     background: #FF7A00;
