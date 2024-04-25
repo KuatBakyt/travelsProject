@@ -35,7 +35,8 @@ let mapDispatchToProps = (dispatch) => {
     return {
         setTours: (tours_Data) =>{
             dispatch(setToursAcCr(tours_Data));
-        }
+        },
+        
     }
 }
 

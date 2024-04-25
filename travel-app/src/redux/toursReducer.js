@@ -1,6 +1,8 @@
 const SET_TOURS = "SET_TOURS"
+const CHOOSE_CATEGORY = "CHOOSE_CATEGORY"
+
 let initialState = {
-    toursData: [
+    tours_Data: [
         // {
         //     name: "Экскурсия по городу Алматы и урочищу Медео",
         //     city: "Алматы",
@@ -81,24 +83,45 @@ let initialState = {
         //     img: "https://www.advantour.com/img/kazakhstan/tours/lake-issyk-tour.jpg",
         //     id: 8
         // }
-    ]
+    ],
+    currentTourse: [],
 }
 
 const toursReducer = (state = initialState, action) => {
-    switch(action.type) {
+    state.currentTourse = state.tours_Data
+    switch (action.type) {
+        case CHOOSE_CATEGORY: {
+            console.log(state.currentTourse);
+            if(action.category === "all"){
+                return{
+                    ...state,
+                    currentTourse: state.tours_Data
+                }
+            }
+            state.currentTourse = state.tours_Data.filter(c => c.category === action.category);
+            console.log(state.currentTourse);
+         }
+         return {
+            ...state,
+            currentTourse: state.currentTourse
+         }
         case SET_TOURS: {
             return {
-              ...state,
-              tours_Data: action.tours_Data
+                ...state,
+                tours_Data: action.tours_Data
             }
-          }
-          default:
+        }
+        default:
             return state;
     }
 }
 
 export const setToursAcCr = (tours_Data) => {
-    return { type: SET_TOURS, tours_Data: tours_Data } 
+    return { type: SET_TOURS, tours_Data: tours_Data }
+}
+
+export const chooseCategoryAcCr = (category) => {
+    return { type: CHOOSE_CATEGORY, category: category }
 }
 
 export default toursReducer;

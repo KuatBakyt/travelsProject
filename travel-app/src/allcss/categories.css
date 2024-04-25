@@ -1,0 +1,17 @@
+.categories{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 30px 0;
+}
+
+.categories div{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: #FF7A00;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
