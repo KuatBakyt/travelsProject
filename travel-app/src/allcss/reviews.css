@@ -6,7 +6,7 @@
 }
 
 .review-reviews{
-    color: rgb(255, 255, 0);
+    color: rgb(255, 156, 8);
 }
 
 .formReview {
@@ -96,4 +96,12 @@
     margin-bottom: 20px;
 }
 
+.best-reviews{
+    max-width: 300px;
+    margin: 0 auto;
+}
 
+.best-reviews a{
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+}
