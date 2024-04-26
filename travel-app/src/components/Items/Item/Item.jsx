@@ -1,14 +1,21 @@
 import React from 'react'
 import "../../../allcss/item.css"
 import { IoIosStar } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 function Item(props) {
+    const navigate = useNavigate()
+    function redirectDescription(){
+        navigate(`/ItemDescription/${props.id}`)
+    }
     let addToOrder = () => {
         props.addToOrder(props.id)
     }
     return (
         <div className='item'>
-
+          <div className='btndetail' onClick={redirectDescription}>
+            Подробней
+          </div>
             <div className='item-picture'>
                 <img src={props.img} alt="" />
                 <div className='count-stars'>

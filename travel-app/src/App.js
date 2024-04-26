@@ -8,6 +8,7 @@ import Contacts from './components/Contacts/Contacts'
 import Headroom from 'react-headroom';
 import Reviews from './components/Reviews/Reviews';
 import HeaderContainer from './components/Header/HeaderContainer';
+import ItemDescriptionContainer from './components/Items/Item/ItemDescription/ItemDescriptionContainer';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
      
       <div className='section'>
       <Routes>
+      <Route path="/ItemDescription/:id/" element={<ItemDescriptionContainer />} />
+
       <Route path='/' element={<Main />}/>
       <Route path='/about' element={<AboutUs />}/>
       <Route path='/news' element={<News />}/>

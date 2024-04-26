@@ -1,0 +1,109 @@
+.bg-description {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5326505602240896) 100%, rgba(255, 255, 255, 0.020045518207282953) 100%);
+}
+
+.bg-description>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.description-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px;
+}
+
+.description-head img {
+    width: clamp(10vw, 25em, 100vw);
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 34px -3px rgba(255,255,255,0.75);
+}
+
+.description-info {
+    width: clamp(10vw, 35em, 100vw);
+    height: 250px;
+    border-radius: 0 15px 0 15px;
+    background: rgb(255,122,0);
+    background: linear-gradient(90deg, rgba(255,122,0,0.7203256302521008) 100%, rgba(253,29,29,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.description-info-details{
+    position: relative;
+}
+
+.description-info-details::before{
+    content: "";
+    height: 140px;
+    width: 2px;
+    background: white;
+    position: absolute;
+    right: -70px;
+    top: 25px;
+}
+
+.description-info-details div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+    color: rgb(255, 255, 255);
+}
+
+.description-info-details h3{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.description-info-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.description-info-price h4{
+    margin: 20px 0;
+    color: rgb(251, 255, 24);
+    font-size: 20px;
+}
+
+.description-info-price b{
+    color: rgb(255, 255, 255);
+}
+
+.description-info-price h2{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.description-info-text{
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    width: 800px;
+}
+
+.description-info-text h2{
+    text-align: center;
+}
+
+
+.description-info-text p{
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 20px;
+}
