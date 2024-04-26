@@ -6,11 +6,8 @@ import AboutUs from './components/AboutUs/AboutUs';
 import News from './components/News/News';
 import Contacts from './components/Contacts/Contacts'
 import Headroom from 'react-headroom';
-<<<<<<< HEAD
 import Reviews from './components/Reviews/Reviews';
-=======
 import HeaderContainer from './components/Header/HeaderContainer';
->>>>>>> 04cc947cf0a96d433034f87829ddfa650419093a
 
 function App() {
   return (

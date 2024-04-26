@@ -1,12 +1,11 @@
 .Skidka {
     width: 100%;
-    height: 450px;
     background-color: #FFBD80;
     padding-top: 10%;
 }
 
 .Skidka-wrap {
-   width: 80%;
+   width: 90%;
    margin-left: auto;
    margin-right: auto;
 }
@@ -14,40 +13,16 @@
 .skidka-block {
     background-color: white; 
     border: solid 1px rgb(173, 172, 172);
-    width: 320px;
+    width: 400px;
     height: 300px; 
     color: black; 
     border-radius: 1rem; 
 }
 
-.skidka-img {
-    height: 180px; 
-    border-top-left-radius: 0.75rem; 
-    border-top-right-radius: 0.75rem; 
-    background-color: rgb(228, 206, 161);
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.skidka-img-center {
-    height: 120px; 
-    width: 120px; 
-    border-radius: 9999px; 
-}
-
-.skidka-info {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 0.25rem; 
-    padding: 1rem; 
-}
-
-.skidka-name {
-    font-size: 1.25rem; 
-    font-weight: 600;
+.skidka-block img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem; 
 }
 
 .slick-slide > div {
@@ -57,3 +32,73 @@
 .slick-dots li.slick-active button:before {
     color:orange !important;
 }
+
+.Skidka:hover .slick-prev{
+    left: 40px !important;
+    opacity: 1 !important;
+}
+
+.Skidka:hover .slick-next{
+    right: 40px !important;
+    opacity: 1 !important;
+}
+   
+
+.slick-prev{
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 10 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: 1px solid #e1e1e1 !important;
+    border-radius: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transition: .4s !important;
+    background-color: #fff !important;
+    left: 80px !important;
+    transition: .4s !important;
+    opacity: 0 !important;
+}
+
+.slick-prev::before{
+    content: "";
+    background-image: url('../../public/img/arrow-right.png');
+    background-size: 100%;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    font-size: 0 !important;
+    transform: rotate(180deg);
+}
+
+
+.slick-next{
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 10 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: 1px solid #e1e1e1 !important;
+    border-radius: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transition: .4s !important;
+    background-color: #e1e1e1 !important;
+    right: 80px !important;
+    transition: .4s !important;
+    opacity: 0;
+}
+    
+.slick-next::before{
+    content: "";
+    background-image: url('../../public/img/arrow-right.png');
+    background-size: 100%;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    font-size: 0 !important;
+}
+
