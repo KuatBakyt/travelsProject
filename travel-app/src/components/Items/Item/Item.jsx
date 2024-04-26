@@ -3,6 +3,9 @@ import "../../../allcss/item.css"
 import { IoIosStar } from "react-icons/io";
 
 function Item(props) {
+    let addToOrder = () => {
+        props.addToOrder(props.id)
+    }
     return (
         <div className='item'>
 
@@ -23,7 +26,7 @@ function Item(props) {
             <div className='animate-items'>
                 <div><img src="../img/heart.png" alt="" /></div>
                 <div><img src="../img/comment.png" alt="" /></div>
-                <div><img src="../img/plus.png" alt="" /></div>
+                <div onClick={addToOrder}><img src="../img/plus.png" alt="" /></div>
             </div>
 
             <div className='item-info'>

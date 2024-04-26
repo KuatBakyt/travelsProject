@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
 import { Route, Routes } from 'react-router-dom';
@@ -8,12 +7,13 @@ import News from './components/News/News'
 import Comments from './components/Comments/Comments'
 import Contacts from './components/Contacts/Contacts'
 import Headroom from 'react-headroom';
+import HeaderContainer from './components/Header/HeaderContainer';
 
 function App() {
   return (
     <div>
       <Headroom>
-      <Header />
+      <HeaderContainer />
       </Headroom>
      
       <div className='section'>

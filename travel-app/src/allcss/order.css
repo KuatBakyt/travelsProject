@@ -1,0 +1,43 @@
+.order {
+    width: 95%;
+    color: black;
+    padding: 10px 5px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.order img{
+    width: 130px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.order h4{
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 250px;
+}
+
+.order p{
+    color: #797979;
+    font-weight: normal;
+}
+
+.order b{
+    float: left;
+}
+
+.order .delete_icon{
+    color: #FF7A00;
+    transition: color, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.order .delete_icon:hover{
+    color: #ff993a;
+    transform: scale(1.5);
+}
