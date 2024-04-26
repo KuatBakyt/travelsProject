@@ -1,0 +1,155 @@
+.about-us {
+    width: 100%;
+}
+
+
+.aboutus-section-one {
+    width: 100%;
+    height: 663px;
+    background-color: #FF7A00;
+}
+
+.ao-head {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ao-head p {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.ao-infa {
+    width: 1216px;
+    height: 478px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ao-infa-firstline {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+}
+
+.ao-infa-secondline {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+}
+
+.ao-infa-1 {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+
+.ao-infa-1 p b{
+    color: white;
+    font-size: 20px;
+}
+
+.ao-infa-1 p {
+    color: white;
+    font-size: 16px;
+    line-height: 19.5px;
+}
+
+.ao-infa-1-2 {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ao-infa-1-2-3 {
+    width: 260px;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.aboutus-section-two {
+    width: 100%;
+    height: 610px;
+    display: flex;
+    justify-content: center;
+    background-color: #FFBD80;
+}
+
+.ao-sectiontwo-wrapper {
+    width: 90%;
+    max-width: 1200px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.ao-sectiontwo-1 {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.ao-img-oiu img {
+    height: 304px;
+}
+
+.ao-img-oiu-1 {
+    margin-bottom: -6px;
+}
+
+.ao-almatyinfa {
+    width: 60%;
+}
+
+.ao-almatyinfa p b {
+    font-size: 50px;
+}
+
+.ao-almatyinfa p {
+    font-size: 20px;
+}
+
+.ao-sectiontwo-2 {
+    position: absolute;
+    left: 47%;
+}
+
+.ao-wrapperthree {
+    position: absolute;
+    width: 85%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ao-sectiontwo-3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #FFBD80;
+}
+
+.ao-img-oiu-12 {
+    margin-top: -5%;
+}
+
+.ao-leaf2 {
+    position: absolute;
+    margin-left: -15%;
+}
