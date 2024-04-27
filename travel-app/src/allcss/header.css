@@ -1,6 +1,5 @@
 .header-main {
     width: 100%;
-    background: #ffffff;
 }
 
 header {
@@ -50,6 +49,7 @@ header {
 .basket-profile {
     display: flex;
     align-items: center;
+    margin-left: 150px;
 }
 
 .basket-profile a {
@@ -146,6 +146,31 @@ header {
 
 .sum{
     text-align: center;
-    color: #2f2f2f;
+    color: #FF7A00;
     margin: 5px;
+    font-weight: bold;
+}
+
+.details-pay{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.btn-next-pay{
+    width: 180px;
+    height: 30px;
+    border-radius: 5px;
+    background: #FF7A00;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .basket-profile {
+        margin-left: 0;
+    } 
 }

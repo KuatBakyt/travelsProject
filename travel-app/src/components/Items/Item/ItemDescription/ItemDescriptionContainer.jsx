@@ -3,6 +3,7 @@ import ItemDescription from "./ItemDescription";
 import withAuthRedirect from "../../../HOC/withAuthTedirect"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { addToOrdersAcCr } from "../../../../redux/toursReducer";
 
 const ItemDescriptionContainer = (props) => {
     const [ oneItem, setOneItem] = useState({});
@@ -35,10 +36,15 @@ let mapStateToProps = (state) => {
     }
 }
 
+let mapDispatchToProps = (dispatch) => {
+    return {
+        addToOrder: (id) => {
+            dispatch(addToOrdersAcCr(id))
+          }
+    }
+}
+
 
 let AuthRedirect = withAuthRedirect(ItemDescriptionContainer)
 
-export default connect(mapStateToProps,
-    {
-    }
-)(AuthRedirect)
+export default connect(mapStateToProps,mapDispatchToProps)(AuthRedirect)

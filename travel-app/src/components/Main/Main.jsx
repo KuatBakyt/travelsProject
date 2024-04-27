@@ -25,10 +25,15 @@ function Main() {
           </main>
         </div>
       </div>
-      <div className='search-item'>
-        <img src="../img/search.png" alt="" />
-        <input type="text" placeholder='Поиск туров...' />
+
+      <div className='container'>
+        <div className='search-item'>
+          <img src="../img/search.png" alt="" />
+          <input type="text" placeholder='Поиск туров...' />
+        </div>
+        
       </div>
+
       <ItemsContainer />
       <Support />
     </div>

@@ -1,6 +1,6 @@
 .item {
     width: 280px;
-    min-height: 408px;
+    height: 380px;
     border-radius: 10px;
     box-shadow: 10px 10px 20px 0px #00000040;
     margin: 20px 0;
@@ -22,7 +22,7 @@
 }
 
 .item-info {
-    padding: 22px 25px;
+    padding: 20px;
     background: #ffffff;
     position: absolute;
 }
@@ -40,7 +40,11 @@
 .detail-item {
     display: flex;
     align-items: center;
-    margin: 15px 0;
+    margin: 10px 0;
+}
+
+.detail-item p{
+    margin: 0;
 }
 
 .detail-item img {

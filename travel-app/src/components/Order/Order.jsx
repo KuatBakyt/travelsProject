@@ -10,7 +10,7 @@ function Order(props) {
     <div className='order'>
       <img src={props.item.img} />
       <div> <h4>{props.item.name}</h4>
-        <b>{props.item.price}</b></div>
+        <b>{props.item.price} T</b></div>
 
       {/* <FaTrash /> */}
       <FaTrash className="delete_icon" onClick={deleteOrder} size={30}/>

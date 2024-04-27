@@ -9,6 +9,8 @@ import Headroom from 'react-headroom';
 import Reviews from './components/Reviews/Reviews';
 import HeaderContainer from './components/Header/HeaderContainer';
 import ItemDescriptionContainer from './components/Items/Item/ItemDescription/ItemDescriptionContainer';
+import Pay from './components/Pay/Pay';
+import HeaderBootstrap from './components/HeaderBootstrap/HeaderBootstrap';
 
 function App() {
   return (
@@ -17,7 +19,6 @@ function App() {
       <HeaderContainer />
       </Headroom>
      
-      <div className='section'>
       <Routes>
       <Route path="/ItemDescription/:id/" element={<ItemDescriptionContainer />} />
 
@@ -26,8 +27,8 @@ function App() {
       <Route path='/news' element={<News />}/>
       <Route path='/reviews' element={<Reviews/>}/>
       <Route path='/contacts' element={<Contacts />}/>
+      <Route path='/pay' element={<Pay />}/>
       </Routes>
-      </div>
       <Footer/>
     </div>
   );
