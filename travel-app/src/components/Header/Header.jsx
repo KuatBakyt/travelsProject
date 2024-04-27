@@ -3,15 +3,20 @@ import '../../allcss/header.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { FaShoppingBasket } from "react-icons/fa";
 import Order from '../Order/Order';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Header(props) {
     let navigate = useNavigate()
+    let currentUser = JSON.parse(localStorage.getItem('user'))
     function redirectDescription() {
         navigate(`/pay`)
     }
+    // let logOut = () => {
+    //     localStorage.removeItem('user')
+    //     navigate('/login')
+    // }
+
     const showOrders = (props) => {
         let sum = 0;
         props.toursPage.orders.forEach(e => { sum += Number.parseFloat(e.price) })
@@ -45,7 +50,7 @@ function Header(props) {
         <div className='header-main'>
             <Navbar expand="lg" className="bg-white">
                 <div className='container'>
-                    <header class="d-flex justify-content-between w-100">
+                    <header className="d-flex justify-content-between w-100">
                         <div className='logo'>TRAVEL</div>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav ">
@@ -73,19 +78,18 @@ function Header(props) {
                                         </div>
                                     )
                                 }
-                                {/* <div className='profile'>
-                                    <img src="../img/ava.png" alt="" />
-                                </div> */}
 
-                                <NavDropdown title="Логин" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Логин</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.4">
-                                    Регистрация
-                                </NavDropdown.Item>
-                            </NavDropdown>
+                                {
+                                    currentUser != null ? (  <NavLink to={"/profile"}><div className='profile'><img src={currentUser.urlImg} alt="" /></div></NavLink>)
+                                        :
+                                        (<NavDropdown title="Логин" id="basic-nav-dropdown">
+                                            <NavDropdown.Item><NavLink to="/login">Логин</NavLink></NavDropdown.Item>
+                                            <NavDropdown.Item ><NavLink to="/register">Регистрация</NavLink></NavDropdown.Item>
+                                        </NavDropdown>)
+                                }
 
                             </div>
-                            
+
                         </Navbar.Collapse>
                     </header>
                 </div>

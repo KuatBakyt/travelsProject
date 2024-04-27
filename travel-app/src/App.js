@@ -10,7 +10,9 @@ import Reviews from './components/Reviews/Reviews';
 import HeaderContainer from './components/Header/HeaderContainer';
 import ItemDescriptionContainer from './components/Items/Item/ItemDescription/ItemDescriptionContainer';
 import Pay from './components/Pay/Pay';
-import HeaderBootstrap from './components/HeaderBootstrap/HeaderBootstrap';
+import Login from './components/Login/Login';
+import RegistrationContainer from './components/Registration/RegistrationContainer';
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
       <Route path='/reviews' element={<Reviews/>}/>
       <Route path='/contacts' element={<Contacts />}/>
       <Route path='/pay' element={<Pay />}/>
+      <Route path='/register' element={<RegistrationContainer />}/>
+      <Route path='/login' element={<Login />}/>
+      <Route path='/profile' element={<Profile />}/>
       </Routes>
       <Footer/>
     </div>
