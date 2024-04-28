@@ -1,6 +1,5 @@
 import React from 'react'
 import { IoStar } from "react-icons/io5";
-import { NavLink } from 'react-router-dom';
 
 function PostReview(props) {
   return (
@@ -14,9 +13,11 @@ function PostReview(props) {
                 (props.user.urlImg)
               } />
             </div>
+
             <div className="review-username">
               <strong>{props.user.name}</strong>
             </div>
+
           </div>
 
           <div className="review-reviews">
@@ -26,12 +27,12 @@ function PostReview(props) {
             <IoStar />
             <IoStar />
           </div>
-
         </div>
 
         <div className="review-comment">
           <p>{props.message}</p>
         </div>
+
 
       </div>
     </>

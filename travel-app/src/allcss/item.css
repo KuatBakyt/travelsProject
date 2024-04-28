@@ -88,7 +88,7 @@
 
 .animate-items{
     bottom: 0;
-    left: 26%;
+    left: 32%;
     top: 50%;
     display: flex;
     transition: ease 0.3s ;
@@ -106,6 +106,7 @@
     justify-content: center;
     margin: 0 5px;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .animate-items img{

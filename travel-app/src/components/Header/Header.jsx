@@ -12,10 +12,12 @@ function Header(props) {
     function redirectDescription() {
         navigate(`/pay`)
     }
-    // let logOut = () => {
-    //     localStorage.removeItem('user')
-    //     navigate('/login')
-    // }
+    function redirectLogin() {
+        navigate(`/login`)
+    }
+    function redirectRegister() {
+        navigate(`/register`)
+    }
 
     const showOrders = (props) => {
         let sum = 0;
@@ -83,8 +85,8 @@ function Header(props) {
                                     currentUser != null ? (  <NavLink to={"/profile"}><div className='profile'><img src={currentUser.urlImg} alt="" /></div></NavLink>)
                                         :
                                         (<NavDropdown title="Логин" id="basic-nav-dropdown">
-                                            <NavDropdown.Item><NavLink to="/login">Логин</NavLink></NavDropdown.Item>
-                                            <NavDropdown.Item ><NavLink to="/register">Регистрация</NavLink></NavDropdown.Item>
+                                            <NavDropdown.Item onClick={redirectLogin}>Логин</NavDropdown.Item>
+                                            <NavDropdown.Item onClick={redirectRegister}>Регистрация</NavDropdown.Item>
                                         </NavDropdown>)
                                 }
 

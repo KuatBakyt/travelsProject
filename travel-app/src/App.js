@@ -14,6 +14,7 @@ import Login from './components/Login/Login';
 import RegistrationContainer from './components/Registration/RegistrationContainer';
 import Profile from './components/Profile/Profile';
 import ReviewsContainer from './components/Reviews/ReviewsContainer';
+import AddCommentContainer from './components/Reviews/AddComment/AddCommentContainer';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path='/register' element={<RegistrationContainer />}/>
       <Route path='/login' element={<Login />}/>
       <Route path='/profile' element={<Profile />}/>
+      <Route path='/addcomment' element={<AddCommentContainer />}/>
       </Routes>
       <Footer/>
     </div>

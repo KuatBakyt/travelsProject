@@ -2,20 +2,23 @@ import React from 'react'
 import "../../../allcss/item.css"
 import { IoIosStar } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
+import { FaPlus } from "react-icons/fa6";
+import { BiSolidLike } from "react-icons/bi";
 
 function Item(props) {
     const navigate = useNavigate()
-    function redirectDescription(){
+    function redirectDescription() {
         navigate(`/ItemDescription/${props.id}`)
     }
     let addToOrder = () => {
         props.addToOrder(props.id)
     }
+
     return (
         <div className='item'>
-          <div className='btndetail' onClick={redirectDescription}>
-            Подробней
-          </div>
+            <div className='btndetail' onClick={redirectDescription}>
+                Подробней
+            </div>
             <div className='item-picture'>
                 <img src={props.img} alt="" />
                 <div className='count-stars'>
@@ -31,8 +34,10 @@ function Item(props) {
             </div>
 
             <div className='animate-items'>
-                <div><img src="../img/heart.png" alt="" /></div>
-                <div><img src="../img/comment.png" alt="" /></div>
+
+                <div><BiSolidLike /></div>
+                <div><FaPlus /></div>
+
                 <div onClick={addToOrder}><img src="../img/plus.png" alt="" /></div>
             </div>
 

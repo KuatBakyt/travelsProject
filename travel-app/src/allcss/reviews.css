@@ -29,8 +29,12 @@
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
     backdrop-filter: blur(15px);
     border: 1px solid #ffffd8;
-    padding: 20px;
+    padding: 5px 20px;
     margin: 20px;
+}
+
+.review-block p{
+    float: right;
 }
 
 
@@ -107,6 +111,21 @@
 }
 
 .pagination{
-    width: 150px;
+    margin-bottom: 0;
+}
+
+.review-actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 400px;
     margin: 0 auto;
+}
+
+.add-comments{
+    margin: 70px 0;
+}
+
+.editcomment{
+    float: right;
 }

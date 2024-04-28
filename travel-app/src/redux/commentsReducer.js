@@ -1,13 +1,14 @@
 const SET_COMMENTS = "SET_COMMENTS";
-const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
-const SET_TOTAL_COUNT = 'SET_TOTAL_COUNT'
+const ADD_COMMENT = "ADD_COMMENT";
+const UPDATE_NEW_COMMENT = "UPDATE_NEW_COMMENT";
 
 let initialState = {
     comments: [],
-    newCommentMessage: ''
+    newCommentMessage: '',
 }
 
 let commentsReducer = (state = initialState, action) => {
+    
     switch (action.type) {
         case SET_COMMENTS: {
             return {
@@ -16,26 +17,64 @@ let commentsReducer = (state = initialState, action) => {
                 // totalComments: action.comments.length,
             }
         }
-        // case SET_CURRENT_PAGE: {
-        //     return {
-        //         ...state,
-        //         currentPage: action.currentPage
-        //         // totalComments: action.comments.length,
-        //     }
-        // }
-        // case SET_TOTAL_COUNT:
-        //     return { ...state, totalUsersCount: action.count }
+        case ADD_COMMENT: {
 
+            let postnewComment = {
+                message: state.newCommentMessage,
+                id: state.comments.length + 1,
+                user: JSON.parse(localStorage.getItem("user"))
+            }
+            fetch("http://localhost:8080/comments", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(postnewComment)
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('error HTTP, status' + response.status)
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log('Данные отправлены', data);
+                })
+                .catch((error) => {
+                    console.log("Произошла ошибка", error);
+                })
+
+            return {
+                ...state,
+                comments: [...state.comments, postnewComment],
+                newCommentMessage: '',
+            }
+        }
+        case UPDATE_NEW_COMMENT: {
+            return {
+                ...state,
+                newCommentMessage: action.newCommentMessageText,
+            }
+        }
         default:
             return state;
     }
 }
+
 export const setCommentAcAcr = (comments) => {
     return { type: SET_COMMENTS, comments: comments }
 }
 
-export const setCurrentPageAcCr = (currentPage) => ({ type: SET_CURRENT_PAGE, currentPage: currentPage })
+export const addCommentActionCreator = () => {
+    return { type: ADD_COMMENT }
+}
 
-export const setTotalUsersCountAcCr = (totalUsersCount) => ({ type: SET_TOTAL_COUNT, count: totalUsersCount })
+export const updateNewCommentTextAC = (newCommentMessage) => {
+    return {
+        type: UPDATE_NEW_COMMENT,
+        newCommentMessageText: newCommentMessage
+    }
+}
+
 
 export default commentsReducer;
