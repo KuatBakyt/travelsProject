@@ -13,6 +13,7 @@ import Pay from './components/Pay/Pay';
 import Login from './components/Login/Login';
 import RegistrationContainer from './components/Registration/RegistrationContainer';
 import Profile from './components/Profile/Profile';
+import ReviewsContainer from './components/Reviews/ReviewsContainer';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
       <Route path='/' element={<Main />}/>
       <Route path='/about' element={<AboutUs />}/>
       <Route path='/news' element={<News />}/>
-      <Route path='/reviews' element={<Reviews/>}/>
+      <Route path='/reviews' element={<ReviewsContainer/>}/>
       <Route path='/contacts' element={<Contacts />}/>
       <Route path='/pay' element={<Pay />}/>
       <Route path='/register' element={<RegistrationContainer />}/>

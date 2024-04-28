@@ -10,7 +10,6 @@
 }
 
 .formReview {
-    margin-top: 40px;
     text-align: center;
 }
 
@@ -21,6 +20,7 @@
 .mini-review{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 
@@ -104,4 +104,9 @@
 .best-reviews a{
     text-decoration: none;
     color: rgb(50, 50, 50);
+}
+
+.pagination{
+    width: 150px;
+    margin: 0 auto;
 }

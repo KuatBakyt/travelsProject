@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import Items from "./Items"
 import { connect } from "react-redux"
 import { addToOrdersAcCr, setToursAcCr } from "../../redux/toursReducer"
-import withAuthRedirect from "../HOC/withAuthTedirect"
 
 const ItemsContainer = (props) => {
     useEffect(()=>{
@@ -42,8 +41,4 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 
-let AuthRedirect = withAuthRedirect(ItemsContainer)
-
- 
-
-export default connect(MapStateToProps, mapDispatchToProps)(AuthRedirect)
+export default connect(MapStateToProps, mapDispatchToProps)(ItemsContainer)
