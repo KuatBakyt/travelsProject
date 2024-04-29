@@ -88,7 +88,7 @@
 
 .animate-items{
     bottom: 0;
-    left: 32%;
+    left: 35%;
     top: 50%;
     display: flex;
     transition: ease 0.3s ;
@@ -109,13 +109,6 @@
     cursor: pointer;
 }
 
-.animate-items img{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    line-height: 30px;
-}
-
 .item:hover .animate-items{
     opacity: 1;
     top: 30%;
@@ -123,8 +116,8 @@
 }
 
 .animate-items div:hover{
-    filter: invert(1);
     transition: 0.3s ease;
+    background: #f69335;
 }
 
 .btndetail{
@@ -148,4 +141,8 @@
 
 .item:hover .btndetail{
     top: -32px;
+}
+
+.activelike{
+    color: #FF7A00;
 }

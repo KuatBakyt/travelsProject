@@ -5,7 +5,7 @@ import CategoriesContainer from '../Categories/CategoriesContainer'
 
 function Items(props) {
 
-    let itemElements = props.toursPage.currentTourse.map(e => <Item name={e.name} city={e.city} kind={e.kind} time={e.time} price={e.price} discount={e.discount} img={e.img} id={e.id} key={e.id} addToOrder={props.addToOrder}/>)
+    let itemElements = props.toursPage.currentTourse.map(e => <Item e={e} name={e.name} city={e.city} kind={e.kind} time={e.time} price={e.price} discount={e.discount} img={e.img} id={e.id} key={e.id} addToOrder={props.addToOrder}/>)
     return (
         <div className='items-content'>
             <div className='container'>

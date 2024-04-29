@@ -2,6 +2,8 @@ const SET_TOURS = "SET_TOURS"
 const CHOOSE_CATEGORY = "CHOOSE_CATEGORY"
 let ADD_ORDER = "ADD_ORDER"
 let DELETE_ORDER = "DELETE_ORDER"
+// const FOLLOW = 'FOLLOW';
+// const UNFOLLOW = 'UNFOLLOW'
 
 let initialState = {
     toursData: [],
@@ -62,6 +64,26 @@ const toursReducer = (state = initialState, action) => {
                 )
             }
         }
+        // case FOLLOW:
+        //     return {
+        //         ...state,
+        //         toursData: state.toursData.map(u => {
+        //             if (u.id === action.id) {
+        //                 return { likes: state.toursData.length + 1,}
+        //             }
+        //             return u
+        //         })
+        //     }
+        // case UNFOLLOW:
+        //     return {
+        //         ...state,
+        //         toursData: state.toursData.map(u => {
+        //             if (u.id === action.id) {
+        //                 return {...u.likes - 1}
+        //             }
+        //             return u
+        //         })
+        //     }
         default:
             return state;
     }
@@ -82,5 +104,8 @@ export const addToOrdersAcCr = (id) => {
 export const deleteOrderAcCr = (id) => {
     return { type: DELETE_ORDER, id: id }
 }
+
+// export const followAcCr = (id) => ({ type: FOLLOW, id })
+// export const unfollowAcCr = (id) => ({ type: UNFOLLOW, id })
 
 export default toursReducer;
