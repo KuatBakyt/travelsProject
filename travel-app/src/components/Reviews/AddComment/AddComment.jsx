@@ -1,9 +1,11 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap';
 import "../../../allcss/reviews.css"
+import { useNavigate } from 'react-router-dom';
 
 
 function AddComment(props) {
+    let navigate = useNavigate();
     const newCommentMessage = React.useRef();
     
     let addComment = () => {
@@ -16,6 +18,7 @@ function AddComment(props) {
         });
 
         newCommentMessage.current.value = ""
+        navigate("/reviews")
     }
 
     let updateNewComments = () => {

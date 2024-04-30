@@ -31,6 +31,7 @@
     border: 1px solid #ffffd8;
     padding: 5px 20px;
     margin: 20px;
+    position: relative;
 }
 
 .review-block p{
@@ -118,7 +119,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -128,4 +129,45 @@
 
 .editcomment{
     float: right;
+}
+
+.delete-comment{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+    position: absolute;
+    right: -8%;
+    bottom: 15%;
+    opacity: 0;
+}
+
+.delete-icon{
+    color: #000000;
+    width: 20px;
+    height: 20px;
+    transition: .3s ease;
+}
+
+.delete-comment:hover{
+    background: #FF7A00;
+    border: 1px solid #ffffff;
+    transition: .3s ease;
+}
+
+.delete-comment:hover .delete-icon{
+    color: #ffffff;
+    transition: .3s ease;
+ 
+}
+
+.review-block:hover .delete-comment{
+    right: 8%;
+    bottom: 15%;
+    opacity: 1;
 }

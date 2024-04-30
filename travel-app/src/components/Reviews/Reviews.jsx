@@ -2,14 +2,16 @@ import '../../allcss/reviews.css';
 import React from "react";
 import PostReview from './PostReview/PostReview';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-let Reviews = (props) => {
+let Reviews = ({ authUser, ...props }) => {
  let navigate = useNavigate()
 
  function redirectAddComment() {
   navigate(`/addcomment`)
 }
+
+let allComments =  props.records.map(c => <PostReview email={c.email} user={c.user} message={c.message} id={c.id} key={c.id} deleteComment={props.deleteComment} authUser={authUser}/>)
 
   return (
     <div className="Reviews">
@@ -19,27 +21,28 @@ let Reviews = (props) => {
       <div className="container" >
         <div className="mini-review" >
           {
-            props.records.map(c => <PostReview email={c.email} user={c.user} message={c.message} id={c.id} key={c.id} time={c.time} />)
+           allComments
           }
         </div>
 
         <div className='review-actions'>
           <ul className='pagination'>
             <li className='page-item'>
-              <a href="#" className='page-link' onClick={props.prePage}>Prev</a>
+              <Link className='page-link' onClick={props.prePage}>Prev</Link>
             </li>
             {
               props.numbers.map((n, i) => (
                 <li className={`page-item${props.currentPage === n ? 'active' : ''}`} key={i}>
-                  <a href="#" className='page-link'
-                    onClick={() => props.changeCPage(n)}>{n}</a>
+                  <Link  className='page-link'
+                    onClick={() => props.changeCPage(n)}>{n}</Link>
                 </li>
               ))
             }
             <li className='page-item'>
-              <a href="#" className='page-link' onClick={props.nextPage}>Next</a>
+              <Link className='page-link' onClick={props.nextPage}>Next</Link>
             </li>
           </ul>
+          <Button variant="info" className='btn-add-comment'>Мои отзывы</Button>{' '}
           <Button variant="outline-success" className='btn-add-comment' onClick={redirectAddComment}>Оставить отзыв</Button>{' '}
         </div>
       </div>

@@ -1,10 +1,23 @@
 import React from 'react'
 import { IoStar } from "react-icons/io5";
+import { IoTrashBinSharp } from "react-icons/io5";
 
 function PostReview(props) {
+
+  let deleteComment = () => { props.deleteComment(props.id) }
+  
   return (
     <>
       <div className="review-block" >
+        {
+          props.authUser
+            ?
+            <div className='delete-comment' onClick={() => deleteComment(props.id)}>
+              <IoTrashBinSharp className='delete-icon' />
+            </div>
+            :
+            <span></span>
+        }
         <div className="review-top">
           <div className="review-profile">
             <div className="review-img">

@@ -11,9 +11,9 @@ import ItemDescriptionContainer from './components/Items/Item/ItemDescription/It
 import Pay from './components/Pay/Pay';
 import Login from './components/Login/Login';
 import RegistrationContainer from './components/Registration/RegistrationContainer';
-import Profile from './components/Profile/Profile';
 import ReviewsContainer from './components/Reviews/ReviewsContainer';
 import AddCommentContainer from './components/Reviews/AddComment/AddCommentContainer';
+import ProfileContainer from './components/Profile/ProfileContainer';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       <Headroom>
       <HeaderContainer />
       </Headroom>
-     
+      
       <Routes>
       <Route path="/ItemDescription/:id/" element={<ItemDescriptionContainer />} />
 
@@ -33,8 +33,9 @@ function App() {
       <Route path='/pay' element={<Pay />}/>
       <Route path='/register' element={<RegistrationContainer />}/>
       <Route path='/login' element={<Login />}/>
-      <Route path='/profile' element={<Profile />}/>
+      <Route path='/profile' element={<ProfileContainer />}/>
       <Route path='/addcomment' element={<AddCommentContainer />}/>
+     
       </Routes>
       <Footer/>
     </div>

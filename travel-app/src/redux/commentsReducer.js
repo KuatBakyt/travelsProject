@@ -1,20 +1,25 @@
 const SET_COMMENTS = "SET_COMMENTS";
 const ADD_COMMENT = "ADD_COMMENT";
 const UPDATE_NEW_COMMENT = "UPDATE_NEW_COMMENT";
+const DELETE_COMMENT = "DELETE_COMMENT";
 
 let initialState = {
     comments: [],
     newCommentMessage: '',
+    allComments: [],
+    arr: []
 }
 
+let authUser = JSON.parse(localStorage.getItem("user"))
+
 let commentsReducer = (state = initialState, action) => {
-    
     switch (action.type) {
         case SET_COMMENTS: {
             return {
                 ...state,
-                comments: action.comments
-                // totalComments: action.comments.length,
+                comments: action.comments,
+                arr: action.comments.filter(c => c.user.email == authUser.email),
+                allComments: state.arr.length
             }
         }
         case ADD_COMMENT: {
@@ -56,6 +61,25 @@ let commentsReducer = (state = initialState, action) => {
                 newCommentMessage: action.newCommentMessageText,
             }
         }
+        case DELETE_COMMENT: {
+            fetch(`http://localhost:8080/comments/${action.id}`, {
+              method: "DELETE",
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error('error HTTP, status' + response.status)
+                }
+                console.log("Успешно удален");
+              })
+              .catch((error) => {
+                console.log("Произошла ошибка", error);
+              })
+            const filteredComment = state.comments.filter(c => c.id != action.id);
+            return {
+              ...state,
+              comments: filteredComment
+            };
+          }
         default:
             return state;
     }
@@ -76,5 +100,8 @@ export const updateNewCommentTextAC = (newCommentMessage) => {
     }
 }
 
+export const deleteCommentAcAcr = (id) => {
+    return { type: DELETE_COMMENT, id: id }
+  }
 
 export default commentsReducer;

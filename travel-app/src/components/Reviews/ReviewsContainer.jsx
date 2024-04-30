@@ -3,9 +3,9 @@ import { useEffect } from 'react';
 
 import { connect } from 'react-redux';
 import Reviews from './Reviews';
-import { setCommentAcAcr } from '../../redux/commentsReducer';
+import { deleteCommentAcAcr, setCommentAcAcr } from '../../redux/commentsReducer';
 
-const ReviewsContainer = (props) => {
+const ReviewsContainer = ({ authUser, ...props }) => {
   let dataArr = props.commentsPage.comments
   const [currentPage, setCurrentPage] = useState(1)
   const recordsPerPage = 5;
@@ -20,11 +20,11 @@ const ReviewsContainer = (props) => {
       setCurrentPage(currentPage - 1)
     }
   }
-  
+
   let changeCPage = (id) => {
     setCurrentPage(id)
   }
-  
+
   let nextPage = () => {
     if (currentPage !== npage) {
       setCurrentPage(currentPage + 1)
@@ -47,7 +47,7 @@ const ReviewsContainer = (props) => {
       })
   }, []);
 
-  return <Reviews {...props} prePage={prePage} changeCPage={changeCPage} nextPage={nextPage} numbers={numbers} records={records} currentPage={currentPage}/>
+  return <Reviews {...props} authUser={authUser}  prePage={prePage} changeCPage={changeCPage} nextPage={nextPage} numbers={numbers} records={records} currentPage={currentPage}/>
 }
 
 let mapStateToProps = (state) => {
@@ -60,7 +60,10 @@ let mapDispatchToProps = (dispatch) => {
   return {
     setComment: (comments) => {
       dispatch(setCommentAcAcr(comments));
-    }
+    },
+    deleteComment: (id) => {
+      dispatch(deleteCommentAcAcr(id));
+    },
   }
 }
 
