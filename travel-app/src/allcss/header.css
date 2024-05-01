@@ -1,5 +1,11 @@
 .header-main {
     width: 100%;
+    z-index: 1000;
+    position: relative;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    z-index: 0;
 }
 
 header {

@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 
-let Profile = ({ authUser, allComments, ...props }) => {
+let Profile = ({ authUser, allCommentsCount, ...props }) => {
   let navigate = useNavigate()
   const [eyes, setEye] = useState(true)
   const [show, setShow] = useState(false);
@@ -54,8 +54,6 @@ let Profile = ({ authUser, allComments, ...props }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  console.log(allComments);
-
   return (
     <div className='profile-content'>
       <div className='profile-head'> <h2>Профиль</h2></div>
@@ -78,14 +76,15 @@ let Profile = ({ authUser, allComments, ...props }) => {
               <div className='border-between'></div>
               <div className='profile-detail-info'><FiPhone className="profile-icons" />  {authUser.phonenumber}</div>
               <div className='border-between'></div>
-              <Link className='profile-detail-info'><MdOutlineInsertComment className="profile-icons" /> Комментарий {
-
-
-                allComments
+              <Link className='profile-detail-info' ><MdOutlineInsertComment className="profile-icons" /> Комментарий {
+                allCommentsCount == ""
+                ? "0"
+                : allCommentsCount
               }
               </Link>
             </div>
             <div className='profile-actions'>
+             
               <Button variant="primary" onClick={handleShow}>Редактировать</Button>{' '}
               <Button variant="danger" onClick={deleteProfile}>Удалить</Button>{' '}
               <NavLink to="/login" onClick={logOut}> <Button variant="secondary">Выйти</Button>{' '}</NavLink>

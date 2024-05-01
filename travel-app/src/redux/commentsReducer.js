@@ -2,12 +2,14 @@ const SET_COMMENTS = "SET_COMMENTS";
 const ADD_COMMENT = "ADD_COMMENT";
 const UPDATE_NEW_COMMENT = "UPDATE_NEW_COMMENT";
 const DELETE_COMMENT = "DELETE_COMMENT";
+const RATE = "RATE"
 
 let initialState = {
     comments: [],
     newCommentMessage: '',
-    allComments: [],
-    arr: []
+    allCommentsCount: [],
+    arrcount: [],
+    rating: 5
 }
 
 let authUser = JSON.parse(localStorage.getItem("user"))
@@ -18,8 +20,8 @@ let commentsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 comments: action.comments,
-                arr: action.comments.filter(c => c.user.email == authUser.email),
-                allComments: state.arr.length
+                arrcount: action.comments.filter(c => c.user.email == authUser.email),
+                allCommentsCount: state.arrcount.length
             }
         }
         case ADD_COMMENT: {
@@ -27,7 +29,9 @@ let commentsReducer = (state = initialState, action) => {
             let postnewComment = {
                 message: state.newCommentMessage,
                 id: state.comments.length + 1,
-                user: JSON.parse(localStorage.getItem("user"))
+                rate: state.rating,
+                user: JSON.parse(localStorage.getItem("user")),
+                
             }
             fetch("http://localhost:8080/comments", {
                 method: "POST",
@@ -63,23 +67,29 @@ let commentsReducer = (state = initialState, action) => {
         }
         case DELETE_COMMENT: {
             fetch(`http://localhost:8080/comments/${action.id}`, {
-              method: "DELETE",
+                method: "DELETE",
             })
-              .then((response) => {
-                if (!response.ok) {
-                  throw new Error('error HTTP, status' + response.status)
-                }
-                console.log("Успешно удален");
-              })
-              .catch((error) => {
-                console.log("Произошла ошибка", error);
-              })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('error HTTP, status' + response.status)
+                    }
+                    console.log("Успешно удален");
+                })
+                .catch((error) => {
+                    console.log("Произошла ошибка", error);
+                })
             const filteredComment = state.comments.filter(c => c.id != action.id);
             return {
-              ...state,
-              comments: filteredComment
+                ...state,
+                comments: filteredComment
             };
+        }
+        case RATE: {
+          return {
+            ...state,
+            rating:  action.value
           }
+        }
         default:
             return state;
     }
@@ -102,6 +112,10 @@ export const updateNewCommentTextAC = (newCommentMessage) => {
 
 export const deleteCommentAcAcr = (id) => {
     return { type: DELETE_COMMENT, id: id }
-  }
+}
+
+export const rateAcAcr = (value) => {
+    return { type: RATE, value: value }
+}
 
 export default commentsReducer;

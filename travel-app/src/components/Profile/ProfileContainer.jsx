@@ -4,15 +4,15 @@ import { connect } from 'react-redux';
 import Profile from './Profile';
 import { deleteProfile, handleChangeInfo, updateUserInfoText } from '../../redux/usersReducer';
 
-let ProfileContainer = ({ authUser, allComments, ...props }) => {
+let ProfileContainer = ({ authUser, allCommentsCount, ...props }) => {
 
-    return <Profile {...props} authUser={authUser} allComments={allComments} />
+    return <Profile {...props} authUser={authUser} allCommentsCount={allCommentsCount} />
 }
 
 let mapStateToProps = (state) => {
     let authUser = localStorage.getItem("user")
     return {
-        allComments: state.commentsPage.allComments,
+        allCommentsCount: state.commentsPage.allCommentsCount,
         authUser,
         ...state
     }

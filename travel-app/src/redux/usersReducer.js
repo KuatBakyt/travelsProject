@@ -2,7 +2,6 @@ const CREATE_USER = "CREATE_USER";
 const DELETE_USER = "DELETE_USER";
 const PUT_USER = "CHANGE_INFO";
 const UPDATE_USER_INFO = "UPDATE_USER_INFO";
-// const SET_COMMENTS_USER = "SET_COMMENTS_USER";
 
 let initialState = {
     users: [],
@@ -105,16 +104,6 @@ let usersReducer = (state = initialState, action) => {
                 })
             }
         }
-        // case SET_COMMENTS_USER: {
-        //     let authUser = JSON.parse(localStorage.getItem("user"))
-        //     let authUserEmail = authUser.email
-        //     if(authUserEmail === action.comments.user.email){
-        //        return {
-        //         ...state,
-        //         userscomments: [...state.userscomments, action.comments]
-        //        }
-        //     }
-        // }
         default:
             return state;
     }
@@ -137,6 +126,5 @@ export const updateUserInfoText = (newCountry, newEmail, newName, newSurname, ne
 
 export const handleChangeInfo = (id, authUser) => ({ type: PUT_USER, id: id, authUser: authUser })
 
-// export const setUsersComment = (comments) => ({ type: SET_COMMENTS_USER, comments: comments})
 
 export default usersReducer;

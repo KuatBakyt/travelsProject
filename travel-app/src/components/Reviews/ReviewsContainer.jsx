@@ -51,8 +51,10 @@ const ReviewsContainer = ({ authUser, ...props }) => {
 }
 
 let mapStateToProps = (state) => {
+  let authUser = JSON.parse(localStorage.getItem("user"))
   return {
-    commentsPage: state.commentsPage
+    commentsPage: state.commentsPage,
+    authUser
   }
 }
 
@@ -63,7 +65,7 @@ let mapDispatchToProps = (dispatch) => {
     },
     deleteComment: (id) => {
       dispatch(deleteCommentAcAcr(id));
-    },
+    }
   }
 }
 

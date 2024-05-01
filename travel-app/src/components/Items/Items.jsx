@@ -3,8 +3,8 @@ import Item from './Item/Item'
 import "../../allcss/items.css"
 import CategoriesContainer from '../Categories/CategoriesContainer'
 
-function Items(props) {
-    let itemElements = props.toursPage.currentTourse.map(e => <Item e={e} name={e.name} city={e.city} kind={e.kind} time={e.time} price={e.price} discount={e.discount} img={e.img} id={e.id} key={e.id} addToOrder={props.addToOrder}/>)
+function Items({authUser, ...props}) {
+    let itemElements = props.toursPage.currentTourse.map(tour => <Item tour={tour} name={tour.name} city={tour.city} kind={tour.kind} time={tour.time} price={tour.price} discount={tour.discount} img={tour.img} id={tour.id} key={tour.id} addToOrder={props.addToOrder} like={props.like} authUser={authUser} likespeople={tour.likespeople} dislike={props.dislike}/>)
     return (
         <div className='items-content'>
             <div className='container'>

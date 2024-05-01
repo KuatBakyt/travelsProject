@@ -19,25 +19,24 @@ function App() {
   return (
     <div>
       <Headroom>
-      <HeaderContainer />
+        <HeaderContainer />
       </Headroom>
-      
-      <Routes>
-      <Route path="/ItemDescription/:id/" element={<ItemDescriptionContainer />} />
 
-      <Route path='/' element={<Main />}/>
-      <Route path='/about' element={<AboutUs />}/>
-      <Route path='/news' element={<News />}/>
-      <Route path='/reviews' element={<ReviewsContainer/>}/>
-      <Route path='/contacts' element={<Contacts />}/>
-      <Route path='/pay' element={<Pay />}/>
-      <Route path='/register' element={<RegistrationContainer />}/>
-      <Route path='/login' element={<Login />}/>
-      <Route path='/profile' element={<ProfileContainer />}/>
-      <Route path='/addcomment' element={<AddCommentContainer />}/>
-     
+      <Routes>
+        <Route path="/ItemDescription/:id/" element={<ItemDescriptionContainer />} />
+
+        <Route path='/' element={<Main />} />
+        <Route path='/about' element={<AboutUs />} />
+        <Route path='/news' element={<News />} />
+        <Route path='/reviews' element={<ReviewsContainer />} />
+        <Route path='/contacts' element={<Contacts />} />
+        <Route path='/pay' element={<Pay />} />
+        <Route path='/register' element={<RegistrationContainer />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/profile' element={<ProfileContainer />} />
+        <Route path='/addcomment' element={<AddCommentContainer />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

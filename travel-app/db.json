@@ -4,12 +4,18 @@
       "name": "Экскурсия по городу Алматы и урочищу Медео",
       "city": "Алматы",
       "kind": "Частный тур",
-      "time": "12 часов",
+      "time": "10 часов",
       "price": 7000,
       "discount": -15,
       "img": "https://morena.kz/foto/allfoto/tshan/tsh37.jpg",
       "category": "mountains",
       "description": "Крупнейший в мире высокогорный спортивный комплекс «Медеу» расположен в одноименном урочище Заилийского Алатау вблизи Алматы на высоте около 1700 метров над уровнем моря. От разрушительного воздействия селевых потоков «Медеу» защищает одноименная плотина, построенная в конце 1960-х годов и расположенная к югу от катка. Специальное водовместилище позволяет удерживать здесь около 6 миллионов кубических метров воды, а на лестнице, ведущей к плотине и состоящей из 842 ступеней, регулярно проводятся соревнования по восхождению на скорость.",
+      "likespeople": [
+        "fornado@gmail.com",
+        "fornado@gmail.com",
+        "kuatbakyt@gmail.com"
+      ],
+      "likes": 2,
       "id": 1
     },
     {
@@ -22,6 +28,13 @@
       "img": "https://www.advantour.com/img/kazakhstan/tours/almaty-medeo-tour.jpg",
       "category": "mountains",
       "description": "Крупнейший в мире высокогорный спортивный комплекс «Медеу» расположен в одноименном урочище Заилийского Алатау вблизи Алматы на высоте около 1700 метров над уровнем моря. От разрушительного воздействия селевых потоков «Медеу» защищает одноименная плотина, построенная в конце 1960-х годов и расположенная к югу от катка. Специальное водовместилище позволяет удерживать здесь около 6 миллионов кубических метров воды, а на лестнице, ведущей к плотине и состоящей из 842 ступеней, регулярно проводятся соревнования по восхождению на скорость.",
+      "likespeople": [
+        "fornado@gmail.com",
+        "fornado@gmail.com",
+        "kuatbakyt@gmail.com",
+        "kuatbakyt@gmail.com"
+      ],
+      "likes": 2,
       "id": 2
     },
     {
@@ -34,6 +47,10 @@
       "img": "https://ticketon.kz/media/upload/42873u54364_photo_341626.jpeg",
       "category": "medeo",
       "description": "Крупнейший в мире высокогорный спортивный комплекс «Медеу» расположен в одноименном урочище Заилийского Алатау вблизи Алматы на высоте около 1700 метров над уровнем моря. От разрушительного воздействия селевых потоков «Медеу» защищает одноименная плотина, построенная в конце 1960-х годов и расположенная к югу от катка. Специальное водовместилище позволяет удерживать здесь около 6 миллионов кубических метров воды, а на лестнице, ведущей к плотине и состоящей из 842 ступеней, регулярно проводятся соревнования по восхождению на скорость.",
+      "likespeople": [
+        "fornado@gmail.com"
+      ],
+      "likes": 1,
       "id": 3
     },
     {
@@ -46,7 +63,15 @@
       "img": "https://www.advantour.com/img/kazakhstan/tours/lake-issyk-tour.jpg",
       "category": "lakes",
       "description": "Крупнейший в мире высокогорный спортивный комплекс «Медеу» расположен в одноименном урочище Заилийского Алатау вблизи Алматы на высоте около 1700 метров над уровнем моря. От разрушительного воздействия селевых потоков «Медеу» защищает одноименная плотина, построенная в конце 1960-х годов и расположенная к югу от катка. Специальное водовместилище позволяет удерживать здесь около 6 миллионов кубических метров воды, а на лестнице, ведущей к плотине и состоящей из 842 ступеней, регулярно проводятся соревнования по восхождению на скорость.",
-      "id": 4
+      "likespeople": [
+        "fornado@gmail.com",
+        "fornado@gmail.com",
+        "kuatbakyt@gmail.com",
+        "kuatbakyt@gmail.com",
+        "kuatbakyt@gmail.com"
+      ],
+      "likes": 2,
+      "id": 0
     }
   ],
   "categories_Data": [
@@ -92,12 +117,33 @@
       "id": 2,
       "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdpZ2dhQGdtYWlsLmNvbSIsImlhdCI6MTcxNDM4ODg0MiwiZXhwIjoxNzE0MzkyNDQyLCJzdWIiOiIyIn0.isByuuWkIwzx283jpGqZQsEadz0DucvM9nEHpk1F_Qw",
       "password": "$2a$10$3cB8Xpg9xlElTzrFma9dke0zKwNEukAeALWMo/EXszchPL43bgSeO"
+    },
+    {
+      "email": "fornado@gmail.com",
+      "password": "$2a$10$RCbj/Zyl/sEtTD13JwKGZ.FBfk9Q.i04fFvsG8V9k1mpTjBWZiFu.",
+      "name": "Froman",
+      "surname": "Bede",
+      "country": "Italy",
+      "phonenumber": "9666 2222 444",
+      "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnXtCWefCbmO3j9UUMvEUmsKFD1it6zNSzFVWwbDK01A&s",
+      "id": 3
+    },
+    {
+      "email": "lion@gmail.com",
+      "password": "$2a$10$RFG7lY8EDGsid0xHzY8mX..dnDO0XR31ASDyhSULY0l9DkFe0Q39.",
+      "name": "King",
+      "surname": "Me",
+      "country": "Tarzania",
+      "phonenumber": "8777 555 666 3",
+      "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIagUEwBajWfkmU9tBFk3uXKldnxnoFfPfzQ&s",
+      "id": 4
     }
   ],
   "comments": [
     {
       "message": "bla bla",
       "id": 1,
+      "rate": 4,
       "user": {
         "email": "kuatbakyt@gmail.com",
         "name": "Bakyt",
@@ -112,6 +158,7 @@
     {
       "message": "rrr",
       "id": 2,
+      "rate": 5,
       "user": {
         "email": "kkk@gmail.com",
         "name": "kkk",
@@ -126,6 +173,7 @@
     {
       "message": "bla bla",
       "id": 3,
+      "rate": 5,
       "user": {
         "email": "ererw@gmail.com",
         "name": "werew",
@@ -140,6 +188,7 @@
     {
       "message": "rrr",
       "id": 4,
+      "rate": 3,
       "user": {
         "email": "werer@gmail.com",
         "name": "krewrkk",
@@ -154,6 +203,7 @@
     {
       "message": "bla bla",
       "id": 5,
+      "rate": 3,
       "user": {
         "email": "fewewr@gmail.com",
         "name": "werewrew",
@@ -168,6 +218,7 @@
     {
       "message": "rrr",
       "id": 6,
+      "rate": 4,
       "user": {
         "email": "thrtyty@gmail.com",
         "name": "kqweqwekk",
@@ -177,133 +228,6 @@
         "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxirxogTSYP3og2BQBQri70umx6bIQQfwvGe-vLhEHiJVhBySvgCICGEsfyw&s",
         "id": 7,
         "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imtra0BnbWFpbC5jb20iLCJpYXQiOjE3MTM0NTUwODUsImV4cCI6MTcxMzQ1ODY4NSwic3ViIjoiMyJ9.PAx2JQe8YDbLygqWPiMRWN03inPNR2aeWPd8WLwQ6Rw"
-      }
-    },
-    {
-      "message": "bla bla",
-      "id": 7,
-      "user": {
-        "email": "hythyt@gmail.com",
-        "name": "Bakjyujyt",
-        "surname": "Kuat",
-        "country": "Kazahs",
-        "phonenumber": "87476202879",
-        "urlImg": "",
-        "id": 8,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTM0MjMyMTcsImV4cCI6MTcxMzQyNjgxNywic3ViIjoiMSJ9.bHXAe1-FbQ5G60upy3RuGAKUtnxm_XTwfBdht3E9Two"
-      }
-    },
-    {
-      "message": "rrr",
-      "id": 8,
-      "user": {
-        "email": "dfdfferf@gmail.com",
-        "name": "llll",
-        "surname": "lll",
-        "country": "France",
-        "phonenumber": "815166161621",
-        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxirxogTSYP3og2BQBQri70umx6bIQQfwvGe-vLhEHiJVhBySvgCICGEsfyw&s",
-        "id": 9,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imtra0BnbWFpbC5jb20iLCJpYXQiOjE3MTM0NTUwODUsImV4cCI6MTcxMzQ1ODY4NSwic3ViIjoiMyJ9.PAx2JQe8YDbLygqWPiMRWN03inPNR2aeWPd8WLwQ6Rw"
-      }
-    },
-    {
-      "message": "bla bla",
-      "id": 9,
-      "user": {
-        "email": "wwwww@gmail.com",
-        "name": "vfvbb",
-        "surname": "Kuat",
-        "country": "Kazahs",
-        "phonenumber": "87476202879",
-        "urlImg": "",
-        "id": 10,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTM0MjMyMTcsImV4cCI6MTcxMzQyNjgxNywic3ViIjoiMSJ9.bHXAe1-FbQ5G60upy3RuGAKUtnxm_XTwfBdht3E9Two"
-      }
-    },
-    {
-      "message": "rrr",
-      "id": 10,
-      "user": {
-        "email": "ddd@gmail.com",
-        "name": "grgr",
-        "surname": "lll",
-        "country": "France",
-        "phonenumber": "815166161621",
-        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxirxogTSYP3og2BQBQri70umx6bIQQfwvGe-vLhEHiJVhBySvgCICGEsfyw&s",
-        "id": 11,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imtra0BnbWFpbC5jb20iLCJpYXQiOjE3MTM0NTUwODUsImV4cCI6MTcxMzQ1ODY4NSwic3ViIjoiMyJ9.PAx2JQe8YDbLygqWPiMRWN03inPNR2aeWPd8WLwQ6Rw"
-      }
-    },
-    {
-      "message": "ooogogo",
-      "id": 11,
-      "user": {
-        "email": "kuatbakyt@gmail.com",
-        "name": "Bakyt",
-        "surname": "Kuat",
-        "country": "Africa",
-        "phonenumber": "85165123",
-        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
-        "id": 1,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzMDE3MzgsImV4cCI6MTcxNDMwNTMzOCwic3ViIjoiMSJ9.14p2r_Znf4wfpLBzxAv5FKerxSH1BurM10ggXMcvwZM"
-      }
-    },
-    {
-      "message": "hhh",
-      "id": 12,
-      "user": {
-        "email": "kuatbakyt@gmail.com",
-        "name": "Bakyt",
-        "surname": "Kuat",
-        "country": "Africa",
-        "phonenumber": "85165123",
-        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
-        "id": 1,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzMDE3MzgsImV4cCI6MTcxNDMwNTMzOCwic3ViIjoiMSJ9.14p2r_Znf4wfpLBzxAv5FKerxSH1BurM10ggXMcvwZM"
-      }
-    },
-    {
-      "message": "lll",
-      "id": 13,
-      "user": {
-        "email": "kuatbakyt@gmail.com",
-        "name": "Bakyt",
-        "surname": "Kuat",
-        "country": "Africa",
-        "phonenumber": "85165123",
-        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
-        "id": 1,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQzMDE3MzgsImV4cCI6MTcxNDMwNTMzOCwic3ViIjoiMSJ9.14p2r_Znf4wfpLBzxAv5FKerxSH1BurM10ggXMcvwZM"
-      }
-    },
-    {
-      "message": "Nigga i am",
-      "id": 14,
-      "user": {
-        "email": "tiger@gmail.com",
-        "name": "Nigga",
-        "surname": "Smile",
-        "country": "Nigery",
-        "phonenumber": "85556663331",
-        "urlImg": "https://lifetouch.com/wp-content/uploads/2018/06/Underclass_girlwithbluebg.jpg",
-        "id": 2,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpZ2VyQGdtYWlsLmNvbSIsImlhdCI6MTcxNDM4NzIyNCwiZXhwIjoxNzE0MzkwODI0LCJzdWIiOiIyIn0.ZcnLkuzfUaZxF8RI2R4b14ISoFIK863-S2xeIuGl96M"
-      }
-    },
-    {
-      "message": "Happy happy happy!",
-      "id": 15,
-      "user": {
-        "email": "nechad@gmail.com",
-        "name": "sigma",
-        "surname": "fuffa",
-        "country": "Dania",
-        "phonenumber": "8777555 666 3",
-        "urlImg": "https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg",
-        "id": 2,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdpZ2dhQGdtYWlsLmNvbSIsImlhdCI6MTcxNDM4ODg0MiwiZXhwIjoxNzE0MzkyNDQyLCJzdWIiOiIyIn0.isByuuWkIwzx283jpGqZQsEadz0DucvM9nEHpk1F_Qw",
-        "password": "$2a$10$3cB8Xpg9xlElTzrFma9dke0zKwNEukAeALWMo/EXszchPL43bgSeO"
       }
     }
   ]

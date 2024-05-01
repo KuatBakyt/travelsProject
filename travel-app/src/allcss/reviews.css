@@ -171,3 +171,29 @@
     bottom: 15%;
     opacity: 1;
 }
+
+.navs-comments a{
+    text-decoration: none;
+    color: #000000;
+    margin: 15px;
+}
+
+.navs-comments a.active{
+    text-decoration: none;
+    color: #ffa526;
+    margin: 15px;
+}
+
+.navs-comments a:hover{
+    color: #ff9100;
+}
+
+.star-fill{
+   color: #FF7A00;
+   cursor: pointer;
+}
+
+.star-none{
+    color: #000000;
+    cursor: pointer;
+}

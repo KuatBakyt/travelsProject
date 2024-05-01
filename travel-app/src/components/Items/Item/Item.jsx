@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import "../../../allcss/item.css"
 import { IoIosStar } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { FaPlus } from "react-icons/fa6";
 import { BiLike } from "react-icons/bi";
 import { BiSolidLike } from "react-icons/bi";
 
-function Item(props) {
+function Item({ authUser, ...props }) {
     const navigate = useNavigate()
     function redirectDescription() {
         navigate(`/ItemDescription/${props.id}`)
@@ -15,16 +15,13 @@ function Item(props) {
         props.addToOrder(props.id)
     }
 
-    const [like, setLike] = useState(false)
-  
-    let handleLikes = () => {
-      if (!like) {
-        setLike(true)
-      } else {
-        setLike(false)
-      }
+    let like = () => {
+        props.like(props.id, authUser.email, props.tour)
     }
 
+    let dislike = () => {
+        props.dislike(props.id, authUser.email, props.tour)
+    }
     return (
         <>
             <div className='item'>
@@ -41,28 +38,30 @@ function Item(props) {
                         <IoIosStar />
                     </div>
                     <div className='discount'>
-                        {props.discount}% 
-                        {/* likes : {count} */}
+                        {props.discount}%
                     </div>
                 </div>
 
                 <div className='animate-items'>
-                    <div>
+
                     {
-                        like
-                        ?  <span><BiSolidLike size={30} className='activelike' onClick={handleLikes} /></span>
-                        :  <span><BiLike  size={25}  className='disactivelike' onClick={handleLikes} /></span>
+                        authUser
+                            ? (<div>{
+                                props.likespeople == authUser.email
+                                    ? <span><BiSolidLike size={30} onClick={dislike}/></span>
+                                    : <span><BiLike size={25} onClick={like} /></span>
+                            }
+                            </div>)
+                            : <span></span>
                     }
-                    </div> 
-                    
-                    {/* <div><BiSolidLike size={25} className='icons-item' /></div> */}
+
                     <div><FaPlus size={25} className='icons-item' onClick={addToOrder} /></div>
                 </div>
 
                 <div className='item-info'>
 
                     <h3>{props.name}</h3>
-                    
+
                     <div className='item-details'>
                         <div>
                             <div className='detail-item'><img src="../img/human.png" alt="" /><p>{props.kind}</p></div>

@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import withAuthRedirect from '../../HOC/withAuthTedirect';
-import { addCommentActionCreator, updateNewCommentTextAC } from '../../../redux/commentsReducer';
+import { addCommentActionCreator, rateAcAcr, updateNewCommentTextAC } from '../../../redux/commentsReducer';
 import { connect } from 'react-redux';
 import AddComment from './AddComment';
 
@@ -22,10 +21,10 @@ let mapDispatchToProps = (dispatch) => {
         updateNewComments: (newCommentMessage) => {
             dispatch(updateNewCommentTextAC(
                 newCommentMessage))
-        }
-        // deleteComment: (id) => {
-        //     dispatch(deleteCommentAcCr(id));
-        //   },
+        },
+        rate: (value) => {
+            dispatch(rateAcAcr(value));
+          }
     }
 }
 

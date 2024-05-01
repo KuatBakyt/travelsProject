@@ -1,16 +1,16 @@
 import React from 'react'
-import { IoStar } from "react-icons/io5";
 import { IoTrashBinSharp } from "react-icons/io5";
+import { IoIosStar } from "react-icons/io";
 
-function PostReview(props) {
+function PostReview({ authUser, ...props }) {
 
   let deleteComment = () => { props.deleteComment(props.id) }
-  
+
   return (
     <>
       <div className="review-block" >
         {
-          props.authUser
+          authUser.email == props.user.email
             ?
             <div className='delete-comment' onClick={() => deleteComment(props.id)}>
               <IoTrashBinSharp className='delete-icon' />
@@ -34,11 +34,11 @@ function PostReview(props) {
           </div>
 
           <div className="review-reviews">
-            <IoStar />
-            <IoStar />
-            <IoStar />
-            <IoStar />
-            <IoStar />
+            <IoIosStar size={25} class={props.rate>= 1 ? 'star-fill' : 'star-none'}/>
+            <IoIosStar size={25} class={props.rate >= 2 ? 'star-fill' : 'star-none'}/>
+            <IoIosStar size={25} class={props.rate >= 3 ? 'star-fill' : 'star-none'}/>
+            <IoIosStar size={25} class={props.rate >= 4 ? 'star-fill' : 'star-none'}/>
+            <IoIosStar size={25} class={props.rate >= 5 ? 'star-fill' : 'star-none'}/>
           </div>
         </div>
 

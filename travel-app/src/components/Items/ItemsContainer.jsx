@@ -1,9 +1,9 @@
 import { useEffect } from "react"
 import Items from "./Items"
 import { connect } from "react-redux"
-import { addToOrdersAcCr, setToursAcCr } from "../../redux/toursReducer"
+import { addToOrdersAcCr, diselikeAcCr, likeAcCr, setToursAcCr } from "../../redux/toursReducer"
 
-const ItemsContainer = (props) => {
+const ItemsContainer = ({authUser, ...props}) => {
 
   useEffect(() => {
     fetch("http://localhost:8080/toursData")
@@ -23,12 +23,14 @@ const ItemsContainer = (props) => {
   }, [])
 
 
-  return <Items {...props}/>
+  return <Items {...props} authUser={authUser}/>
 }
 
 let MapStateToProps = (state) => {
+  let authUser = JSON.parse(localStorage.getItem("user"))
   return {
-    toursPage: state.toursPage
+    toursPage: state.toursPage,
+    authUser
   }
 }
 
@@ -38,14 +40,14 @@ let mapDispatchToProps = (dispatch) => {
       dispatch(setToursAcCr(toursData));
     },
     addToOrder: (id) => {
-      dispatch(addToOrdersAcCr(id))
+      dispatch(addToOrdersAcCr(id));
+    },
+    like: (id, authUser, tour) => {
+      dispatch(likeAcCr(id, authUser, tour));
+    },
+    dislike: (id, authUser, tour) => {
+      dispatch(diselikeAcCr(id, authUser, tour));
     }
-    // follow: (id) => {
-    //   dispatch(followAcCr(id));
-    // },
-    // unfollow: (id) => {
-    //   dispatch(unfollowAcCr(id));
-    // }
   }
 }
 
