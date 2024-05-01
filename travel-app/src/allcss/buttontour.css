@@ -1,0 +1,63 @@
+
+.buttontour {
+    position: fixed;
+    z-index: 3;
+    top: 0; 
+    right: 0;
+    width: 500px; 
+    background-color: #fff; 
+    padding: 20px; 
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.buttontour-content {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.buttontour-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttontour-btn {
+    background-color: orange;
+    color: #fff;    
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.buttontour-btn:hover {
+    background-color: rgb(240, 182, 73);
+}
+
+
+.buttontour-close {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.buttontour-close img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.buttontour-content form textarea {
+    height: 10rem;
+    resize: none;
+    width: 100%;
+    border: 1px solid #ccc;
+}

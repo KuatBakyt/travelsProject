@@ -1,0 +1,60 @@
+
+.notice-content {
+  background: transparent;
+}
+
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  margin-bottom: 20px; 
+}
+
+.wrapper ul {
+  list-style: none;
+}
+
+.wrapper ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper ul li {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  margin: 0 10px 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+
+.wrapper ul li .fa {
+  color: #D8E2DC;
+  margin-top: 20px;
+  transition: all 0.5s ease;
+}
+
+
+.wrapper ul li:hover.facebook {
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+
+.wrapper ul li:hover.instagram {
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+
+.wrapper ul li:hover.whatsapp {
+  box-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+

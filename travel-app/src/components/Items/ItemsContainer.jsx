@@ -3,6 +3,7 @@ import Items from "./Items"
 import { connect } from "react-redux"
 import { addToOrdersAcCr, setToursAcCr } from "../../redux/toursReducer"
 import withAuthRedirect from "../HOC/withAuthTedirect"
+import { Link } from 'react-router-dom';
 
 const ItemsContainer = (props) => {
     useEffect(()=>{

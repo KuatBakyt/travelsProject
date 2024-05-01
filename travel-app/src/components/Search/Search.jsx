@@ -1,0 +1,88 @@
+import React, { useState, useEffect, useRef } from "react";
+import "../../allcss/search.css";
+
+const Search = ({ toursData }) => {
+  const [searchItem, setSearchItem] = useState("");
+  const [filteredTours, setFilteredTours] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const inputRef = useRef(null);
+  const [error, setError] = useState(false);
+
+  
+  const filterTours = () => {
+    if (!searchItem) {
+      setFilteredTours([]); 
+    } else {
+      const filtered = toursData.filter((tour) =>
+        tour.name.toLowerCase().includes(searchItem.toLowerCase())
+      );
+      setFilteredTours(filtered);
+      setError(filtered.length === 0);
+    }
+  };
+
+
+  useEffect(() => {
+    filterTours();
+  }, [searchItem, toursData]);
+
+
+  useEffect(() => {
+    const clickOut = (event) => {
+      if (inputRef.current && !inputRef.current.contains(event.target)) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener("click", clickOut);
+
+    return () => {
+      document.removeEventListener("click", clickOut);
+    };
+  }, []);
+
+  const inpFocus = () => {
+    setShowDropdown(true);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      if (error) {
+        alert("По вашему запросу ничего не найдено");
+      }
+    }
+  };
+
+  const handleTourSelect = (tour) => {
+    window.location.href = `/ItemDescription/${tour.id}`;
+  };
+
+  return (
+    <div>
+      <div className="search-item">
+        <img src="../img/search.png" alt="" />
+        <input
+          type="text"
+          placeholder="Поиск туров..."
+          value={searchItem}
+          onChange={(e) => setSearchItem(e.target.value)}
+          onFocus={inpFocus}
+          onKeyPress={handleKeyPress}
+          ref={inputRef}
+        />
+        {showDropdown && (
+          <div className="dropdown-search">
+          {filteredTours.map((tour) => (
+            <div key={tour.id} onClick={() => handleTourSelect(tour)}>
+              {tour.name}
+            </div>
+          ))}
+        </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
+export default Search;
