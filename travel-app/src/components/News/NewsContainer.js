@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import withAuthRedirect from "../HOC/withAuthTedirect";
 import { connect } from "react-redux";
 import News from "./News";
 import { setNewsActionCreator, togglePreloaderActionCreater } from "../../redux/newsReducer";
@@ -47,6 +46,4 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 
-let AuthRedirect = withAuthRedirect(NewsContainer)
-
-export default connect(mapStateToProps, mapDispatchToProps)(AuthRedirect)
+export default connect(mapStateToProps, mapDispatchToProps)(NewsContainer)

@@ -1,0 +1,24 @@
+.registration{
+    height: 120vh;
+   
+}
+
+.registration h3{
+    text-align: center;
+}
+
+form{
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.eye{
+    position: absolute;
+    top: 552px;
+    right: 20px;
+}
+
+input{
+    border: 1px solid black;
+}

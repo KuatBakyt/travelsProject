@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import NewsDescription from "./NewsDescription";
-import withAuthRedirect from "../../HOC/withAuthTedirect"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -36,7 +35,4 @@ let mapStateToProps = (state) => {
     }
 }
 
-
-let AuthRedirect = withAuthRedirect(NewsDescriptionContainer)
-
-export default connect(mapStateToProps)(AuthRedirect)
+export default connect(mapStateToProps)(NewsDescriptionContainer)

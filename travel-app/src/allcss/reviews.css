@@ -9,7 +9,6 @@
 }
 
 .formReview {
-    margin-top: 40px;
     text-align: center;
 }
 
@@ -20,6 +19,7 @@
 .mini-review{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 
@@ -28,8 +28,13 @@
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
     backdrop-filter: blur(15px);
     border: 1px solid #ffffd8;
-    padding: 20px;
+    padding: 5px 20px;
     margin: 20px;
+    position: relative;
+}
+
+.review-block p{
+    float: right;
 }
 
 
@@ -103,4 +108,91 @@
 .best-reviews a{
     text-decoration: none;
     color: rgb(50, 50, 50);
+}
+
+.pagination{
+    margin-bottom: 0;
+}
+
+.review-actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.add-comments{
+    margin: 70px 0;
+}
+
+.editcomment{
+    float: right;
+}
+
+.delete-comment{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+    position: absolute;
+    right: -8%;
+    bottom: 15%;
+    opacity: 0;
+}
+
+.delete-icon{
+    color: #000000;
+    width: 20px;
+    height: 20px;
+    transition: .3s ease;
+}
+
+.delete-comment:hover{
+    background: #FF7A00;
+    border: 1px solid #ffffff;
+    transition: .3s ease;
+}
+
+.delete-comment:hover .delete-icon{
+    color: #ffffff;
+    transition: .3s ease;
+ 
+}
+
+.review-block:hover .delete-comment{
+    right: 8%;
+    bottom: 15%;
+    opacity: 1;
+}
+
+.navs-comments a{
+    text-decoration: none;
+    color: #000000;
+    margin: 15px;
+}
+
+.navs-comments a.active{
+    text-decoration: none;
+    color: #ffa526;
+    margin: 15px;
+}
+
+.navs-comments a:hover{
+    color: #ff9100;
+}
+
+.star-fill{
+   color: #FF7A00;
+   cursor: pointer;
+}
+
+.star-none{
+    color: #000000;
+    cursor: pointer;
 }

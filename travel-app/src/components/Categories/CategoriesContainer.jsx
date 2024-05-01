@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import withAuthRedirect from "../HOC/withAuthTedirect";
 import Categories from "./Categories";
 import { connect } from "react-redux";
 import { setCategoriesAcAcr } from "../../redux/categoriesReducer";
@@ -45,6 +44,5 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 
-let AuthRedirect = withAuthRedirect(CategoriesContainer)
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthRedirect)
+export default connect(mapStateToProps, mapDispatchToProps)(CategoriesContainer)

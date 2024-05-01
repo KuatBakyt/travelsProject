@@ -44,7 +44,4 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 
-
-let AuthRedirect = withAuthRedirect(ItemDescriptionContainer)
-
-export default connect(mapStateToProps,mapDispatchToProps)(AuthRedirect)
+export default connect(mapStateToProps,mapDispatchToProps)(ItemDescriptionContainer)

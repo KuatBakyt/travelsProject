@@ -3,6 +3,7 @@ import "../../../../allcss/itemdescription.css"
 import { BsPeopleFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa6";
+import { FcLike } from "react-icons/fc";
 
 function ItemDescription(props) {
     let addToOrder = () => {
@@ -36,6 +37,7 @@ function ItemDescription(props) {
             </div>
             <div className='container'>
                 <div className='description-info-text'>
+                    <div className='description-likes'><FcLike size={30}/><b>{props.oneItem.likes}</b></div>
                     <h2>{props.oneItem.name}</h2>
                     <p>{props.oneItem.description}</p>
                 </div>

@@ -1,80 +1,55 @@
 import '../../allcss/reviews.css';
 import React from "react";
-import { IoStar } from "react-icons/io5";
-import { NavLink } from 'react-router-dom';
+import PostReview from './PostReview/PostReview';
+import Button from 'react-bootstrap/Button';
+import { Link, useNavigate } from 'react-router-dom';
 
+let Reviews = ({ authUser, ...props }) => {
+  let navigate = useNavigate()
 
-let Reviews = () => {
+  function redirectAddComment() {
+    navigate(`/addcomment`)
+  }
 
-    let reviews = [
-        {
-            id: 1,
-            user: "Михаил",
-            review: "Лучший сайт!!!"
-        },
-        {
-            id: 2,
-            user: "Дмитрий",
-            review: "Спасибо менеджеру за качественную работу"
-        },
-        {
-            id: 3,
-            user: "Асель",
-            review: "Отличная компания! Все для клиента!"
-        },
-        {
-            id: 4,
-            user: "Ксенья",
-            review: "Великолепный город! Лучшая компания!"
-        }
-    ]
+  let allComments = props.records.map(c => <PostReview email={c.email} user={c.user} message={c.message} id={c.id} key={c.id} deleteComment={props.deleteComment} authUser={authUser} rate={c.rate}/>)
 
-
-    return (
-        <div className="Reviews">
-            <div className="formReview">
-                <h2>Отзывы наших клиентов</h2>
-            </div>
-            <div className="container" >
-                <div className='mini-review'>
-                    {
-                        reviews.map((newRew) => (
-
-                            <div className="review-block" key={newRew.id}>
-                                <div className="review-top">
-                                    <div className="review-profile">
-                                        <div className="review-img">
-                                            <img src="https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg" />
-                                        </div>
-                                        <div className="review-username">
-                                            <strong>{newRew.user}</strong>
-                                        </div>
-                                    </div>
-
-                                    <div className="review-reviews">
-                                        <IoStar />
-                                        <IoStar />
-                                        <IoStar />
-                                        <IoStar />
-                                        <IoStar />
-                                    </div>
-
-                                </div>
-
-                                <div className="review-comment">
-                                    <p> {newRew.review} </p>
-                                </div>
-
-                            </div>
-
-                        ))
-                    }
-                </div>
-
-            </div>
+  return (
+    <div className="Reviews">
+      <div className="formReview">
+        <h2>Все отзывы</h2>
+      </div>
+      <div className="container" >
+        <div className="mini-review" >
+          {
+            allComments
+          }
         </div>
 
-    );
+        <div className='review-actions'>
+          <ul className='pagination'>
+            <li className='page-item'>
+              <Link className='page-link' onClick={props.prePage}>Prev</Link>
+            </li>
+            {
+              props.numbers.map((n, i) => (
+                <li className={`page-item${props.currentPage === n ? 'active' : ''}`} key={i}>
+                  <Link className='page-link'
+                    onClick={() => props.changeCPage(n)}>{n}</Link>
+                </li>
+              ))
+            }
+            <li className='page-item'>
+              <Link className='page-link' onClick={props.nextPage}>Next</Link>
+            </li>
+          </ul>
+          <Button variant="outline-success" className='btn-add-comment' onClick={redirectAddComment}>Оставить отзыв</Button>{' '}
+        </div>
+      </div>
+
+    </div>
+  );
+
+
 }
 
 export default Reviews;

@@ -2,11 +2,11 @@ import React from 'react'
 import "../../../allcss/newsdescription.css"
 
 function NewsDescription(props) {
-    
+
     return (
         <div className='news-description'>
-          <div className='news-wrapper'>
-                <div className='news-container'>
+            <div className='container'>
+                <div className='news-wrapper'>
                     <div className='news-head'>
                         <img src={props.oneNews.img} alt="" />
                     </div>
@@ -15,10 +15,8 @@ function NewsDescription(props) {
                         <p>{props.oneNews.content}</p>
                         <p>{props.oneNews.info}</p>
                     </div>
-
                 </div>
-          </div>
-            
+            </div>
         </div>
     )
 }
