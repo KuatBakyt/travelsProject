@@ -2,15 +2,15 @@ import React from 'react'
 import { IoTrashBinSharp } from "react-icons/io5";
 import { IoIosStar } from "react-icons/io";
 
-function PostReview({ authUser, ...props }) {
+function PostReview({authUser, ...props}) {
 
   let deleteComment = () => { props.deleteComment(props.id) }
 
   return (
     <>
       <div className="review-block" >
-        {
-          authUser == props.user.email
+         {
+          (authUser.email == props.user.email)
             ?
             <div className='delete-comment' onClick={() => deleteComment(props.id)}>
               <IoTrashBinSharp className='delete-icon' />

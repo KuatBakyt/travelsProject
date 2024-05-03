@@ -1,12 +1,14 @@
 import { useEffect } from "react"
 import Items from "./Items"
 import { connect } from "react-redux"
-import { addToOrdersAcCr, diselikeAcCr, likeAcCr, setToursAcCr } from "../../redux/toursReducer"
+import { addToOrdersAcCr, setToursAcCr, togglePreloaderActionCreater } from "../../redux/toursReducer"
+import { getToursSuper } from "../../redux/toursSelector"
 
-
-const ItemsContainer = ({authUser, ...props}) => {
+const ItemsContainer = ({ authUser, ...props }) => {
 
   useEffect(() => {
+    props.togglePreloader(true)
+
     fetch("http://localhost:8080/toursData")
       .then((response) => {
         if (!response.ok) {
@@ -15,8 +17,8 @@ const ItemsContainer = ({authUser, ...props}) => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         props.setTours(data);
+        props.togglePreloader(false);
       })
       .catch((error) => {
         console.log(error('Error:', error));
@@ -24,13 +26,13 @@ const ItemsContainer = ({authUser, ...props}) => {
   }, [])
 
 
-  return <Items {...props} authUser={authUser}/>
+  return <Items {...props} authUser={authUser} />
 }
 
 let MapStateToProps = (state) => {
   let authUser = JSON.parse(localStorage.getItem("user"))
   return {
-    toursPage: state.toursPage,
+    toursPage: getToursSuper(state),
     authUser
   }
 }
@@ -43,11 +45,8 @@ let mapDispatchToProps = (dispatch) => {
     addToOrder: (id) => {
       dispatch(addToOrdersAcCr(id));
     },
-    like: (id, authUser, tour) => {
-      dispatch(likeAcCr(id, authUser, tour));
-    },
-    dislike: (id, authUser, tour) => {
-      dispatch(diselikeAcCr(id, authUser, tour));
+    togglePreloader: (status) => {
+      dispatch(togglePreloaderActionCreater(status))
     }
   }
 }

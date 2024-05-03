@@ -138,3 +138,17 @@
     position: absolute;
     margin-left: -15%;
 }
+
+.review-scrolldown{
+    display: flex;
+    align-items: center;
+    color: #FF7A00;
+}
+ 
+.review-scrolldown:hover, .review-scrolldown:hover .profile-icons{
+    color: #f9983e;
+} 
+
+.review-scrolldown p{
+    margin: 0;
+}

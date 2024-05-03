@@ -130,14 +130,3 @@
         opacity: 1;
         transition: .4s ease;
 }
-
-.description-likes{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.description-likes b{
-    margin: 10px;
-}

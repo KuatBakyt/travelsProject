@@ -44,6 +44,9 @@ header {
     color: rgb(25, 24, 24);
 }
 
+.navs{
+    padding: 0;
+}
 
 .navs li {
     list-style: none;
@@ -159,6 +162,10 @@ header {
     line-height: 30px;
     text-align: center;
     cursor: pointer;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: space-around;
 }
 
 @media screen and (max-width: 1200px) {

@@ -1,12 +1,10 @@
 import React from 'react';
 import '../../allcss/aboutus.css';
 import SliderTour from '../SliderTour/SliderTour';
-import Reviews from '../Reviews/Reviews';
 import { IoStar } from "react-icons/io5";
 import { NavLink } from 'react-router-dom';
 import '../../allcss/reviews.css';
-
-
+import { MdOutlineInsertComment } from "react-icons/md";
 
 function AboutUs() {
 
@@ -172,7 +170,7 @@ function AboutUs() {
 
       <div className="Reviews">
         <div className="formReview">
-          <h2>Лучшие отзывы наших клиентов</h2>
+          <h2>Отзывы наших клиентов</h2>
         </div>
         <div className="container" >
           <div className='mini-review'>
@@ -215,9 +213,7 @@ function AboutUs() {
         <div className='best-reviews'>
           <NavLink to={"/reviews"}>
             <div className='review-scrolldown'>
-              <svg width="28" height="30" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.38889 24.5945H30.6111V22.2522H7.38889V24.5945ZM7.38889 17.5675H30.6111V15.2252H7.38889V17.5675ZM7.38889 10.5405H30.6111V8.19816H7.38889V10.5405ZM3.40944 32.7926C2.43833 32.7926 1.62767 32.4319 0.977445 31.7105C0.327222 30.9891 0.00140741 30.0888 0 29.0098V3.78287C0 2.70539 0.325815 1.80594 0.977445 1.0845C1.62907 0.363062 2.43974 0.00156155 3.40944 0H34.5906C35.5617 0 36.3723 0.3615 37.0226 1.0845C37.6728 1.8075 37.9986 2.70695 38 3.78287V40L31.5041 32.7926H3.40944Z" fill="black" />
-              </svg>
+              <MdOutlineInsertComment className="profile-icons" />
               <p>Посмотреть все отзывы</p>
             </div>
           </NavLink>

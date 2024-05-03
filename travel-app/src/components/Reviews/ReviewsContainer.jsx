@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Reviews from './Reviews';
-import { deleteCommentAcAcr, setCommentAcAcr } from '../../redux/commentsReducer';
+import { deleteCommentAcAcr, setCommentAcAcr, togglePreloaderActionCreater } from '../../redux/commentsReducer';
+import withAuthRedirect from '../HOC/withAuthTedirect';
+import { getCommentsSuper } from '../../redux/commentsSelector';
 
 const ReviewsContainer = ({ authUser, ...props }) => {
   let dataArr = props.commentsPage.comments
@@ -31,6 +33,8 @@ const ReviewsContainer = ({ authUser, ...props }) => {
   }
 
   useEffect(() => {
+    props.togglePreloader(true)
+
     fetch("http://localhost:8080/comments")
       .then((response) => {
         if (!response.ok) {
@@ -40,6 +44,7 @@ const ReviewsContainer = ({ authUser, ...props }) => {
       })
       .then((data) => {
         props.setComment(data);
+        props.togglePreloader(false);
       })
       .catch((error) => {
         console.log(error('Error:', error));
@@ -52,8 +57,9 @@ const ReviewsContainer = ({ authUser, ...props }) => {
 let mapStateToProps = (state) => {
   let authUser = JSON.parse(localStorage.getItem("user"))
   return {
-    commentsPage: state.commentsPage,
-    authUser
+    commentsPage: getCommentsSuper(state),
+    authUser,
+    ...state
   }
 }
 
@@ -64,8 +70,11 @@ let mapDispatchToProps = (dispatch) => {
     },
     deleteComment: (id) => {
       dispatch(deleteCommentAcAcr(id));
-    }
+    },
+    togglePreloader: (status) => {
+      dispatch(togglePreloaderActionCreater(status))
+  }
   }
 }
-
-export default connect(mapStateToProps, mapDispatchToProps)(ReviewsContainer)
+let AuthRedirect = withAuthRedirect(ReviewsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(AuthRedirect)

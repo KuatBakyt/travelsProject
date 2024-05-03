@@ -3,8 +3,6 @@ import "../../../allcss/item.css"
 import { IoIosStar } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 import { FaPlus } from "react-icons/fa6";
-import { BiLike } from "react-icons/bi";
-import { BiSolidLike } from "react-icons/bi";
 
 function Item({ authUser, ...props }) {
     const navigate = useNavigate()
@@ -15,13 +13,6 @@ function Item({ authUser, ...props }) {
         props.addToOrder(props.id)
     }
 
-    let like = () => {
-        props.like(props.id, authUser.email, props.tour)
-    }
-
-    let dislike = () => {
-        props.dislike(props.id, authUser.email, props.tour)
-    }
     return (
         <>
             <div className='item'>
@@ -43,18 +34,6 @@ function Item({ authUser, ...props }) {
                 </div>
 
                 <div className='animate-items'>
-
-                    {
-                        authUser
-                            ? (<div>{
-                                props.likespeople == authUser.email
-                                    ? <span><BiSolidLike size={30} onClick={dislike}/></span>
-                                    : <span><BiLike size={25} onClick={like} /></span>
-                            }
-                            </div>)
-                            : <span></span>
-                    }
-
                     <div><FaPlus size={25} className='icons-item' onClick={addToOrder} /></div>
                 </div>
 

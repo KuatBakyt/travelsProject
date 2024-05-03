@@ -35,7 +35,7 @@ function App() {
         <Route path='/reviews' element={<ReviewsContainer />} />
         <Route path='/contacts' element={<Contacts />} />
         <Route path='/pay' element={<Pay />} />
-        <Route path="/tour/:id" element={<TourPage />} />
+        {/* <Route path="/tour/:id" element={<TourPage />} /> */}
         <Route path='/preloader' element={<PreLoader />} />
         <Route path='/register' element={<RegistrationContainer />} />
         <Route path='/login' element={<Login />} />

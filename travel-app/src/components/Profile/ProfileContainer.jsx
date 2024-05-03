@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import withAuthRedirect from '../HOC/withAuthTedirect';
 import { connect } from 'react-redux';
 import Profile from './Profile';

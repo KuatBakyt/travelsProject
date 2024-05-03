@@ -37,7 +37,6 @@ function ItemDescription(props) {
             </div>
             <div className='container'>
                 <div className='description-info-text'>
-                    <div className='description-likes'><FcLike size={30}/><b>{props.oneItem.likes}</b></div>
                     <h2>{props.oneItem.name}</h2>
                     <p>{props.oneItem.description}</p>
                 </div>

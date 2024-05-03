@@ -3,10 +3,7 @@ const TOGGLE_PRELOADER = "TOGGLE_PRELOADER"
 
 
 let initialState = {
-    news_Data: [
-
-    ],
-
+    news_Data: [],
     isLoad: true
  }
  

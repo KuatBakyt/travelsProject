@@ -49,7 +49,7 @@ let Login = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Пароль</Form.Label>
-              <Form.Control type={eyes ? "password" : "text"} onChange={(e) => SetNewUser({ ...newUser, password: e.target.value })} />
+              <Form.Control required type={eyes ? "password" : "text"} onChange={(e) => SetNewUser({ ...newUser, password: e.target.value })} />
               {
                 eyes ? (<span className={s.eye} onClick={() => (setEye(false))}>
                   <FaEye />

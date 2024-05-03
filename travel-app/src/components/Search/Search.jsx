@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../../allcss/search.css";
+import { useNavigate } from "react-router-dom";
 
 const Search = ({ toursData }) => {
   const [searchItem, setSearchItem] = useState("");
@@ -8,6 +9,7 @@ const Search = ({ toursData }) => {
   const inputRef = useRef(null);
   const [error, setError] = useState(false);
 
+  let navigate = useNavigate()
   
   const filterTours = () => {
     if (!searchItem) {
@@ -54,7 +56,7 @@ const Search = ({ toursData }) => {
   };
 
   const handleTourSelect = (tour) => {
-    window.location.href = `/ItemDescription/${tour.id}`;
+    navigate(`/ItemDescription/${tour.id}`);
   };
 
   return (

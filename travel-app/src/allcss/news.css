@@ -50,3 +50,7 @@
     font-size: 14px;
     color: #888;
   }
+
+  .news-content .pagination{
+    margin: 0 auto;
+  }

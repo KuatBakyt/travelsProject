@@ -2,14 +2,15 @@ const SET_COMMENTS = "SET_COMMENTS";
 const ADD_COMMENT = "ADD_COMMENT";
 const UPDATE_NEW_COMMENT = "UPDATE_NEW_COMMENT";
 const DELETE_COMMENT = "DELETE_COMMENT";
-const RATE = "RATE"
+const RATE = "RATE";
+const TOGGLE_PRELOADER = "TOGGLE_PRELOADER";
 
 let initialState = {
     comments: [],
-    newCommentMessage: '',
     allCommentsCount: [],
     arrcount: [],
-    rating: 5
+    rating: 5,
+    isLoad: true
 }
 
 let authUser = JSON.parse(localStorage.getItem("user"))
@@ -90,6 +91,9 @@ let commentsReducer = (state = initialState, action) => {
             rating:  action.value
           }
         }
+        case TOGGLE_PRELOADER: {
+            return {...state, isLoad: action.status}
+         }
         default:
             return state;
     }
@@ -117,5 +121,7 @@ export const deleteCommentAcAcr = (id) => {
 export const rateAcAcr = (value) => {
     return { type: RATE, value: value }
 }
+
+export const togglePreloaderActionCreater = (status) => ({type: TOGGLE_PRELOADER, status: status})
 
 export default commentsReducer;

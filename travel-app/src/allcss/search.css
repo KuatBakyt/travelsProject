@@ -1,6 +1,5 @@
 .search-item {
-    max-width: 600px;
-    width: 100%;
+    width: 50%;
     height: 50px;
     border-radius: 20px;
     background: rgb(40,196,255);
@@ -26,7 +25,7 @@
 
 .dropdown-search {
     position: absolute;
-    top: calc(100% + 10px); 
+    top: calc(90% + 10px); 
     left: 0;
     width: 100%;
     background-color: #ffffff; 
@@ -37,7 +36,7 @@
   }
   
   .dropdown-search a {
-    display: block;
+    display: inline-block;
     padding: 10px; 
     text-decoration: none; 
     color: #333333; 
@@ -52,3 +51,18 @@
     border-bottom-left-radius: 8px; 
     border-bottom-right-radius: 8px; 
   }
+
+  .dropdown-search div {
+    padding: 5px 10px;
+    background: linear-gradient(90deg, rgba(40,196,255,1) 0%, rgba(72,199,247,0.76234243697479) 51%, rgba(255,255,255,0.6362920168067228) 100%);
+    font-weight: bold;
+    display: flex;
+  }
+
+  .dropdown-search div:hover{
+    background: #19a4a9;
+    color: #ffffff;
+    width: 100%;
+  }
+
+

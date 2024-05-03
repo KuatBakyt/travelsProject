@@ -5,19 +5,28 @@ import { FaShoppingBasket } from "react-icons/fa";
 import Order from '../Order/Order';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function Header(props) {
     let navigate = useNavigate()
     let currentUser = JSON.parse(localStorage.getItem('user'))
+
     function redirectDescription() {
         navigate(`/pay`)
+       
     }
     function redirectLogin() {
         navigate(`/login`)
+        handleClose()
     }
     function redirectRegister() {
         navigate(`/register`)
     }
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const showOrders = (props) => {
         let sum = 0;
@@ -30,9 +39,19 @@ function Header(props) {
                 ))}
                 <div className='details-pay'>
                     <p className='sum'>Сумма: {new Intl.NumberFormat().format(sum)} T </p>
-                    <div className='btn-next-pay' onClick={redirectDescription}>
-                        Перейти к оплате
-                    </div>
+                    {
+                        currentUser !== null
+                            ? (
+                                <div className='btn-next-pay' onClick={redirectDescription}>
+                                    Перейти к оплате
+                                </div>
+                            )
+                            :
+                            <div className='btn-next-pay' onClick={handleShow}>
+                                Перейти к оплате
+                            </div>
+                    }
+
                 </div>
 
             </div>
@@ -60,7 +79,12 @@ function Header(props) {
                                 <NavLink className={(navlink) => navlink.isActive ? 'active' : 'inactive'} to="/" > Главная </NavLink>
                                 <NavLink className={(navlink) => navlink.isActive ? 'active' : 'inactive'} to="/about" > О нас </NavLink>
                                 <NavLink className={(navlink) => navlink.isActive ? 'active' : 'inactive'} to="/news" > Новости </NavLink>
-                                <NavLink className={(navlink) => navlink.isActive ? 'active' : 'inactive'} to="/reviews" > Отзывы </NavLink>
+                                {
+                                    currentUser !== null
+                                        ? <NavLink className={(navlink) => navlink.isActive ? 'active' : 'inactive'} to="/reviews" > Отзывы </NavLink>
+                                        : <span></span>
+                                }
+
                                 <NavLink className={(navlink) => navlink.isActive ? 'active' : 'inactive'} to="/contacts" > Контакты </NavLink>
                             </ul>
                             <div className='basket-profile'>
@@ -82,7 +106,7 @@ function Header(props) {
                                 }
 
                                 {
-                                    currentUser != null ? (  <NavLink to={"/profile"}><div className='profile'><img src={currentUser.urlImg} alt="" /></div></NavLink>)
+                                    currentUser != null ? (<NavLink to={"/profile"}><div className='profile'><img src={currentUser.urlImg} alt="" /></div></NavLink>)
                                         :
                                         (<NavDropdown title="Логин" id="basic-nav-dropdown">
                                             <NavDropdown.Item onClick={redirectLogin}>Логин</NavDropdown.Item>
@@ -96,6 +120,21 @@ function Header(props) {
                     </header>
                 </div>
             </Navbar >
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Внимание</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Зайдите в аккаунт, чтобы перейти к оплате </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Отмена
+                    </Button>
+                    <Button variant="primary" onClick={redirectLogin}>
+                        Войти
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div >
     )
 }
