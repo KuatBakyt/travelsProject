@@ -289,21 +289,6 @@
         "id": 1,
         "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQ2NTgxNjYsImV4cCI6MTcxNDY2MTc2Niwic3ViIjoiMSJ9.6_3Vue82MTo7or5r845jzcBgx-e2iYgI8OXDT2tLZrE"
       }
-    },
-    {
-      "message": "Керекмет компания! Оте ризамын",
-      "id": 8,
-      "rate": 5,
-      "user": {
-        "email": "kuatbakyt@gmail.com",
-        "name": "Bakyt",
-        "surname": "Kuat",
-        "country": "Africa",
-        "phonenumber": "85165123",
-        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
-        "id": 1,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQ2NjEyNDEsImV4cCI6MTcxNDY2NDg0MSwic3ViIjoiMSJ9.Xy0ETJO9BCfDE5xhW7zlk0miDQcD5eZEFulmGBlbqss"
-      }
     }
   ],
   "requests": [

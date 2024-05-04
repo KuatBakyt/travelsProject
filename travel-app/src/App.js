@@ -7,9 +7,7 @@ import Contacts from './components/Contacts/Contacts';
 import Headroom from 'react-headroom';
 import HeaderContainer from './components/Header/HeaderContainer';
 import ItemDescriptionContainer from './components/Items/Item/ItemDescription/ItemDescriptionContainer';
-import Pay from './components/Pay/Pay';
 import NewsContainer from './components/News/NewsContainer';
-import TourPage from './components/TourPage/TourPage';
 import NewsDescriptionContainer from './components/News/NewsDescription/NewsDescriptionContainer';
 import PreLoader from './components/Preloader/Preloader';
 import Notice from './components/Notice/Notice';
@@ -18,6 +16,7 @@ import RegistrationContainer from './components/Registration/RegistrationContain
 import ReviewsContainer from './components/Reviews/ReviewsContainer';
 import AddCommentContainer from './components/Reviews/AddComment/AddCommentContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
+import PayContainer from './components/Pay/PayContainer';
 
 function App() {
   return (
@@ -34,8 +33,7 @@ function App() {
         <Route path='/news' element={<NewsContainer />} />
         <Route path='/reviews' element={<ReviewsContainer />} />
         <Route path='/contacts' element={<Contacts />} />
-        <Route path='/pay' element={<Pay />} />
-        {/* <Route path="/tour/:id" element={<TourPage />} /> */}
+        <Route path='/pay' element={<PayContainer />} />
         <Route path='/preloader' element={<PreLoader />} />
         <Route path='/register' element={<RegistrationContainer />} />
         <Route path='/login' element={<Login />} />

@@ -2,6 +2,7 @@ import React from 'react';
 import "../../allcss/news.css";
 import { Link, useNavigate } from 'react-router-dom';
 import PreLoader from '../Preloader/Preloader';
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 function News({ ...props }) {
 
@@ -13,6 +14,9 @@ function News({ ...props }) {
 
   return (
     <div className="news">
+      <div className='btn-back' onClick={() => navigate(-1)}>
+      <FaArrowLeftLong size={30}/>
+      </div>
       {
         props.newsPage.isLoad ? <PreLoader />
           :

@@ -143,6 +143,7 @@
     display: flex;
     align-items: center;
     color: #FF7A00;
+    cursor: pointer;
 }
  
 .review-scrolldown:hover, .review-scrolldown:hover .profile-icons{

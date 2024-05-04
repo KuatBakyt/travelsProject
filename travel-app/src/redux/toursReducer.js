@@ -51,10 +51,11 @@ const toursReducer = (state = initialState, action) => {
                             state.orders.push(c)
                         }
                         return c;
+                        
                     })
+                    
                 }
             }
-            localStorage.setItem('order', JSON.stringify(state.orders))
         }
         case DELETE_ORDER: {
             return {

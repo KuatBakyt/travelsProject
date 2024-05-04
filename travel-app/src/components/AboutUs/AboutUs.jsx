@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../allcss/aboutus.css';
 import SliderTour from '../SliderTour/SliderTour';
 import { IoStar } from "react-icons/io5";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../../allcss/reviews.css';
 import { MdOutlineInsertComment } from "react-icons/md";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function AboutUs() {
+  let currentUser = JSON.parse(localStorage.getItem('user'))
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  let navigate = useNavigate()
+
+  function redirectLogin() {
+    navigate(`/login`)
+    handleClose()
+  }
 
   let reviews = [
     {
@@ -162,7 +176,6 @@ function AboutUs() {
                 <img src='./img/ao-leaf1.png' />
               </div>
 
-
             </div>
           </div>
         </div>
@@ -211,15 +224,40 @@ function AboutUs() {
         </div>
 
         <div className='best-reviews'>
-          <NavLink to={"/reviews"}>
-            <div className='review-scrolldown'>
-              <MdOutlineInsertComment className="profile-icons" />
-              <p>Посмотреть все отзывы</p>
-            </div>
-          </NavLink>
+          {
+            currentUser !== null
+              ? (<NavLink to={"/reviews"}>
+                <div className='review-scrolldown'>
+                  <MdOutlineInsertComment className="profile-icons" />
+                  <p>Посмотреть все отзывы</p>
+                </div>
+              </NavLink>)
+              : (
+                <div className='review-scrolldown' onClick={handleShow}>
+                  <MdOutlineInsertComment className="profile-icons" />
+                  <p>Посмотреть все отзывы</p>
+                </div>
+              )
+          }
+
         </div>
 
       </div>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Внимание</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Зайдите в аккаунт, чтобы перейти к отзывам </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Отмена
+          </Button>
+          <Button variant="primary" onClick={redirectLogin}>
+            Войти
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }

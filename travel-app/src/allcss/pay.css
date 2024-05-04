@@ -1,0 +1,77 @@
+.pay-content{
+    height: 50vh;
+}
+
+.pay-order{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.pay-item{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fdf5e7;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid #ff6600;
+}
+
+.pay-item .pay-img{
+    width: 150px;
+    height: 100px;
+    border: 1px solid #fefdfb;
+    border-radius: 10px;
+}
+
+.pay-item .pay-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.pay-order li{
+    list-style: none;
+}
+
+.pay-order li .pay-name{
+    font-size: 20px;
+    max-width: 400px;
+}
+
+.pay-order .delete_icon{
+    color: #ff6600;
+    transition: color, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.pay-order .delete_icon:hover{
+    color: #f98f48;
+    transform: scale(1.3);
+    transition: color, transform 0.2s ease;
+}
+
+.pay-action h3{
+text-align: center;
+}
+
+.pay-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pay-cards div{
+    width: 120px;
+    height: 35px;
+}
+
+.pay-cards div img{
+    width: 100%;
+    height: 100%;
+}
