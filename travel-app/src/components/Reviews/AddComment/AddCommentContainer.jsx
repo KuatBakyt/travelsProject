@@ -2,6 +2,7 @@ import withAuthRedirect from '../../HOC/withAuthTedirect';
 import { addCommentActionCreator, rateAcAcr, updateNewCommentTextAC } from '../../../redux/commentsReducer';
 import { connect } from 'react-redux';
 import AddComment from './AddComment';
+import { getCommentsSuper } from '../../../redux/Selectors/commentsSelector';
 
 const AddCommentsContainer = (props) => {
       return <AddComment {...props}/>
@@ -9,7 +10,7 @@ const AddCommentsContainer = (props) => {
 
 let mapStateToProps = (state) => {
     return {
-        commentsPage: state.commentsPage
+        commentsPage: getCommentsSuper(state)
     }
 }
 

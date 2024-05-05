@@ -1,10 +1,13 @@
+import { getOrders, getToursSuper } from '../../redux/Selectors/toursSelector';
 import { deleteOrderAcCr } from '../../redux/toursReducer';
 import Header from './Header'
 import { connect } from 'react-redux';
 
+
 let mapStateToProps = (state) => {
     return {
-        toursPage: state.toursPage
+        toursPage: getToursSuper(state),
+        orders: getOrders(state)
     }
 }
 

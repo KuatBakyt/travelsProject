@@ -1,29 +1,7 @@
 let SET_CATEGORIES = "SET_CATEGORIES"
 
 let initialState = {
-    categories_Data: [
-    //    {
-    //       key: 'all',
-    //       name: 'Все'
-    //    },
-    //    {
-    //       key: 'hotdishes',
-    //       name: 'Горячие блюда'
-    //    },
-    //    {
-    //       key: 'snaks',
-    //       name: 'Закуски'
-    //    },
-    //    {
-    //       key: 'salate',
-    //       name: 'Салаты'
-    //    },
-    //    {
-    //       key: 'drinks',
-    //       name: 'Напитки'
-    //    }
- 
-    ]
+    categories_Data: []
  }
  
  const categoriesReducer = (state = initialState, action) => {
