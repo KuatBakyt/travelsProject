@@ -53,3 +53,21 @@
   transform: scale(1.1);
 
 }
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .notice-content {
+   display: none;
+  }
+  
+} 

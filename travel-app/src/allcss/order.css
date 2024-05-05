@@ -41,3 +41,61 @@
     color: #ff993a;
     transform: scale(1.5);
 }
+
+@media screen and (max-width: 600px) {
+    .order {
+        width: 95%;
+        color: black;
+        margin: 10px;
+        min-height: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .order div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .order img{
+        display: none;
+    }
+    
+    .order h4{
+        font-size: 15px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 250px;
+    }
+    
+    .order p{
+        color: #797979;
+        font-weight: normal;
+        text-align: center;
+    }
+    
+    .order b{
+        text-align: center;
+    }
+    
+    .order .delete_icon{
+        color: #FF7A00;
+        transition: color, transform 0.2s ease;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    .order .delete_icon:hover{
+        color: #ff993a;
+        transform: scale(1.2);
+    }
+
+    .details-pay {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+}

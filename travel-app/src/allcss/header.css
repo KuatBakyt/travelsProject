@@ -35,6 +35,13 @@ header {
     margin: 15px;
 }
 
+.navs a:hover{
+    text-decoration: none;
+    color: #fd922d;
+    margin: 15px;
+    transition: .3s ease;
+}
+
 .navs .active {
     color: #FF7A00;
     font-weight: bold;
@@ -68,7 +75,6 @@ header {
     align-items: center;
     margin: 10px 0;
 }
-
 
 .basket {
     width: 40px;
@@ -172,4 +178,56 @@ header {
     .basket-profile {
         margin-left: 0;
     } 
+}
+
+@media screen and (max-width: 1000px) {
+    .shop-menu {
+        position: absolute;
+        top: 200px;
+        left: 0;
+        right: 0;
+        width: 450px;
+        min-height: 100px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 6px 5px 13px -3px rgba(0, 0, 0, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .shop-menu {
+        position: absolute;
+        top: 250px;
+        left: 0;
+        right: 0;
+        width: 280px;
+        min-height: 300px;
+        padding: 10px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 6px 5px 13px -3px rgba(0, 0, 0, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .shop-menu {
+        position: absolute;
+        top: 360px;
+        left: 0;
+        right: 0;
+        width: 200px;
+        min-height: 100px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 6px 5px 13px -3px rgba(0, 0, 0, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }

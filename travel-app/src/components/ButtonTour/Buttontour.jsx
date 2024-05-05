@@ -38,14 +38,14 @@ function Buttontour({ toursData, ...props }) {
                         <div className="buttontour-close">
                             <h3>Горящие туры со скидкой 40%</h3>
                         </div>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Group className="mb-3">
                             <Form.Label>Личные данные</Form.Label>
                             <Form.Control required id="validationDefault01" type="text" placeholder="name@example.com" value={props.newEmail} ref={newEmail} onChange={updateNewRequestText} />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Group className="mb-3">
                             <Form.Control type="text" placeholder="Имя" value={props.newName} ref={newName} onChange={updateNewRequestText} />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Group className="mb-3" >
                             <Form.Control required id="validationDefault01" type="number" placeholder="Номер телефона" value={props.newPhone} ref={newPhone} onChange={updateNewRequestText} />
                         </Form.Group>
                         <Form.Select className="mb-3" aria-label="Default select example">

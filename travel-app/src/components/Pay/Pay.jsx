@@ -2,7 +2,6 @@ import React from 'react'
 import PayOrder from './PayOrder/PayOrder'
 import "../../allcss/pay.css"
 
-
 function Pay({ orders, ...props }) {
 
   let orderElements = orders.map(c => <PayOrder key={c.id} id={c.id} item={c} deleteOrder={props.deleteOrder} />)
@@ -10,7 +9,6 @@ function Pay({ orders, ...props }) {
   let sum = 0;
   orders.forEach(e => { sum += Number.parseFloat(e.price) })
 
-  
   console.log(orders.length );
   return (
     <div className='container'>

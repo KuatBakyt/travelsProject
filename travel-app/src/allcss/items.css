@@ -9,3 +9,16 @@
     align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .items-content h2{
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .items-content h2{
+    font-size: 22px;
+    text-align: center;
+  }
+}

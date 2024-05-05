@@ -2,6 +2,7 @@ import React from 'react'
 import '../../allcss/footer.css'
 
 function Footer() {
+ 
     return (
         <div className='footer-main'>
             <div className='container'>
