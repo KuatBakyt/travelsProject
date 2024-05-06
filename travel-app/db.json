@@ -259,6 +259,35 @@
         "id": 7,
         "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imtra0BnbWFpbC5jb20iLCJpYXQiOjE3MTM0NTUwODUsImV4cCI6MTcxMzQ1ODY4NSwic3ViIjoiMyJ9.PAx2JQe8YDbLygqWPiMRWN03inPNR2aeWPd8WLwQ6Rw"
       }
+    },
+    {
+      "message": "Отличный сайт",
+      "id": 6,
+      "rate": 5,
+      "user": {
+        "email": "kuatbakyt@gmail.com",
+        "name": "Bakyt",
+        "surname": "Kuat",
+        "country": "Africa",
+        "phonenumber": "85165123",
+        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
+        "id": 1,
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQ4MzY1ODYsImV4cCI6MTcxNDg0MDE4Niwic3ViIjoiMSJ9.WFFU4xhCpfglC6UFo13itJ1p2s1t90b-HGG364T9Jws"
+      }
+    },
+    {
+      "id": 7,
+      "rate": 5,
+      "user": {
+        "email": "kuatbakyt@gmail.com",
+        "name": "Bakyt",
+        "surname": "Kuat",
+        "country": "Africa",
+        "phonenumber": "85165123",
+        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
+        "id": 1,
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQ3NTUwOTQsImV4cCI6MTcxNDc1ODY5NCwic3ViIjoiMSJ9.TLHWh2JVhcuoaLqyjNUpkwI32UddvDC1bYluM0vGJ_0"
+      }
     }
   ],
   "requests": [
@@ -271,16 +300,28 @@
       "id": 1
     },
     {
+      "email": "kuatbakyt@gmail.com",
+      "name": "bakyt",
+      "phone": "87461561651",
+      "place": "Озеро Иссык с горами Алма-Аты в мини-группе",
+      "explain": "ferggr",
       "id": 2
     },
     {
+      "email": "ggg@mdmldf.fpfv",
+      "name": "rfre",
+      "phone": "48945416",
+      "place": "Озеро Иссык с горами Алма-Аты в мини-группе",
+      "explain": "ferfe",
       "id": 3
     },
     {
+      "email": "tyt",
+      "name": "rttry",
+      "phone": "56156151",
+      "place": "Озеро Иссык с горами Алма-Аты в мини-группе",
+      "explain": "tgtrg",
       "id": 4
-    },
-    {
-      "id": 5
     }
   ]
 }

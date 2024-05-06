@@ -3,7 +3,10 @@ import "../../allcss/buttontour.css"
 import Form from 'react-bootstrap/Form';
 
 
+
 function Buttontour({ toursData, ...props }) {
+   
+    
     const newEmail = React.useRef();
     const newName = React.useRef();
     const newPhone = React.useRef();
@@ -18,6 +21,7 @@ function Buttontour({ toursData, ...props }) {
         newPlace.current.value = "";
         newExplain.current.value = "";
         props.handleClose();
+        props.setAlert(true)
     }
 
     let updateNewRequestText = () => {
