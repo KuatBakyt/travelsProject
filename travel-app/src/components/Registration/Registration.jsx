@@ -20,7 +20,6 @@ function Registration(props) {
         urlImg: null
     })
 
-
     let handleCreateUser = () => {
         console.log(newUser);
 
@@ -41,7 +40,7 @@ function Registration(props) {
                 console.log(data);
                 props.createUser(data)
                 localStorage.setItem('user', JSON.stringify({ ...data.user, accessToken: data.accessToken }))
-                navigate("/") 
+                navigate("/")
             })
             .catch((error) => {
                 console.log("Произошла ошибка", error);
@@ -55,28 +54,28 @@ function Registration(props) {
                 <Form action=''>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Напишите Email</Form.Label>
-                        <Form.Control required type="text" onChange={(e) => setNewUser({ ...newUser, email: e.target.value })} />
+                        <Form.Control type="text" onChange={(e) => setNewUser({ ...newUser, email: e.target.value })} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
                         <Form.Label>Имя</Form.Label>
-                        <Form.Control required type="text" onChange={(e) => setNewUser({ ...newUser, name: e.target.value })} />
+                        <Form.Control type="text" onChange={(e) => setNewUser({ ...newUser, name: e.target.value })} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
                         <Form.Label>Фамилия</Form.Label>
-                        <Form.Control required type="text" onChange={(e) => setNewUser({ ...newUser, surname: e.target.value })} />
+                        <Form.Control type="text" onChange={(e) => setNewUser({ ...newUser, surname: e.target.value })} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
                         <Form.Label>Страна</Form.Label>
-                        <Form.Control required type="text" onChange={(e) => setNewUser({ ...newUser, country: e.target.value })} />
+                        <Form.Control type="text" onChange={(e) => setNewUser({ ...newUser, country: e.target.value })} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
                         <Form.Label>Номер телефона</Form.Label>
-                        <Form.Control required type="text" onChange={(e) => setNewUser({ ...newUser, phonenumber: e.target.value })} />
+                        <Form.Control type="text" onChange={(e) => setNewUser({ ...newUser, phonenumber: e.target.value })} />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput6">
                         <Form.Label>Ваша картинка URL</Form.Label>
-                        <Form.Control required type="text" onChange={(e) => setNewUser({ ...newUser, urlImg: e.target.value })} />
+                        <Form.Control type="text" onChange={(e) => setNewUser({ ...newUser, urlImg: e.target.value })} />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea7">
