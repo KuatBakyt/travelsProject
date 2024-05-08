@@ -42,3 +42,36 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+
+
+@media (max-width: 900px) {
+ 
+  .news-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 450px;
+    align-items: center;
+  }
+  
+  .news-content-text p{
+    font-size: 16px;
+   }
+}
+
+
+@media (max-width: 600px) {
+
+  .news-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 250px;
+    align-items: center;
+  }
+  
+  .news-content-text p{
+    font-size: 14px;
+   }
+}

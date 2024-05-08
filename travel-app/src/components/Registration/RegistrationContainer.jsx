@@ -1,6 +1,7 @@
 import Registration from './Registration';
 import { createUser } from '../../redux/usersReducer'
 import { connect } from "react-redux";
+import { getUsersSuper } from '../../redux/usersSelector';
 
 const RegistrationContainer = (props) => {
 
@@ -9,7 +10,7 @@ const RegistrationContainer = (props) => {
 
 let mapStateToProps = (state) => {
   return {
-    usersPage: state.usersPage
+    usersPage: getUsersSuper(state)
   }
 }
 

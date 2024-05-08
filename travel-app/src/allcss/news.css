@@ -75,3 +75,54 @@
     filter: invert(1);
     transition: .4s ease;
   }
+
+
+
+
+  @media (max-width: 900px) {
+    .news {
+      width: 90%;
+      padding: 20px;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  }
+
+
+  @media (max-width: 600px) {
+    .news {
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .news-content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .news-content .pagination{
+      margin-right: 30%;
+    }
+
+    .news-item {
+      width: 220px; 
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 0.4px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .news-item img {
+      display: 10%; 
+    }
+  
+  }

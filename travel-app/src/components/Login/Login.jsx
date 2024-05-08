@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import s from "../../allcss/login.module.css"
-
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom'
@@ -14,6 +13,8 @@ let Login = () => {
       email: null,
       password: null
     })
+
+    const [errorMessage, setErrorMessage] = useState(null);
   
     let singIn = () => {
       fetch("http://localhost:8080/login", {
@@ -25,7 +26,7 @@ let Login = () => {
       })
         .then((response) => {
           if (!response.ok) {
-            throw new Error('error HTTP, status' + response.status)
+            throw new Error('Неправильный пароль или email')
           }
           return response.json();
         })
@@ -34,6 +35,7 @@ let Login = () => {
           navigate('/')
         })
         .catch((error) => {
+          setErrorMessage(error.message);
           console.log("Произошла ошибка", error);
         })
     }
@@ -61,10 +63,11 @@ let Login = () => {
                   )
               }
             </Form.Group>
-  
+            {errorMessage && <div className={`alert alert-danger m-3 ${s.alert}`}>{errorMessage}</div>}
             <Button variant="primary" onClick={singIn}> Войти</Button>{' '}
             <Link to='/register'>Зарегистрироваться</Link>
           </Form>
+          
         </div>
       </div>
     )

@@ -55,3 +55,55 @@
     height: 400px;
   }
 
+
+
+  @media (max-width: 900px) {
+    
+      .contact-content {
+        width: 80%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .site-contacts-content {
+      width: 400px;
+      margin: 20px; 
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-map img{
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+
+  @media (max-width: 600px) {
+    
+    .contact-content {
+      width: 80%;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .site-contacts-content {
+    width: 300px;
+    height: 600px;
+    margin: 20px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .contact-map img{
+    width: 300px;
+    height: 300px;
+  }
+
+}

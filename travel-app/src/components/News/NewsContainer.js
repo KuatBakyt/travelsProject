@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import News from "./News";
 import { setNewsActionCreator, togglePreloaderActionCreater } from "../../redux/newsReducer";
+import { getNewsSuper } from "../../redux/newsSelector";
+
 
 const NewsContainer = ({...props}) => {
     let dataArr = props.newsPage.news_Data
@@ -56,7 +58,7 @@ const NewsContainer = ({...props}) => {
 
 let mapStateToProps = (state) => {
     return {
-        newsPage: state.newsPage,
+        newsPage: getNewsSuper(state),
         ...state
     }
 }
