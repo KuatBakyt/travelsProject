@@ -1,5 +1,3 @@
-import { Alert } from "bootstrap";
-
 const ADD_REQUESTS = "ADD_COMMENT";
 const UPDATE_REQUESTS = "UPDATE_NEW_COMMENT";
 
@@ -15,9 +13,6 @@ let initialState = {
 let requestsReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_REQUESTS: {
-            // if (state.newEmail == '' && state.newPhone == '') {
-            //     alert('Заполните номер телефона и почту!')
-            // } else {
                 let postnewRequest = {
                     email: state.newEmail,
                     name: state.newName,

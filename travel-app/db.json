@@ -182,6 +182,16 @@
       "phonenumber": "8777 555 666 3",
       "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIagUEwBajWfkmU9tBFk3uXKldnxnoFfPfzQ&s",
       "id": 4
+    },
+    {
+      "email": "google@gmail.com",
+      "password": "$2a$10$7yUbGhwTdUiwUf9/axaHjOpNexINW3xGEB6nu/dv6NAT.O7JTW.qO",
+      "name": "yandex",
+      "surname": "form",
+      "country": "china",
+      "phonenumber": "9845456465",
+      "urlImg": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAz1BMVEUAAAD/ABI2Njb///8DAQMAAwD8AREAAwM6OjqJAAq/AA7fARD4ABHsAREAHBrs7OzXAQ9JAQa2AQ3mARGnAQxra2vPAQ/yARI2AQRvAQmwAQ12AQiYAQvIAQ9OAQV5eXkTAwMaAgIhISFUAgVoAQifAQs9AQV+AQmHh4csLCyWlpbLy8v29vazs7NLS0vi4uJYWFgTExMsAQNeAAclAQMAExIWKCcfJysAIyK+vr6ioqIgAQArNTQqExQ5FxZDExU1HCAuHhwgExNQERMsJCi9A8T0AAAQjUlEQVR4nNVdCXubOBNGiQBzJVwBY8Cxg4GmTY+YxE1rf+3udv//b/rEZSNxOk6Q933ap4kR7rxoNDMajQTDvBMg5JllIsqgAUaoQZ7nIXyv//yNAfllYNpNTHJIQrTgedpSDsRyNeMOosuKIakpJMMuP1a84D/SM4F5oKJYYugG6+zzKBFMUbVLbZuz5985T4IEQMFGNd1prk8wHyMs1ARdKi4KC6qC9iCVN9CzYZ+y8b0g/zQlkv4p/klCNWPD6Ql7vsrGQ8ZRK6O8pRnLzj0loysJyKyNKuJw8DAubZhsRm1DAjI8v9DEvNns6SwHDtImPi5Hvp0suoVkl26hi1GunucFRMbdq9iiTz4e8tO8F1XtDF0OywSlFfNZlunz8BANFiOzFMb8/HqG1cp+EdmBirOwcp2c8+emaWsFFAaXHXgHz6z9vG+m7yrZ8WD1QsfEbc3a3t98+Pjx44ebC/wORCeyMjZWxJ5T4MkLhSGzat7l/sOP68sU158+TvBLkE+M/RM4HzZzo7BjK/LKt08PlyUePt1g19BUQchtmnk2Jg3NT3Qu0xdbwGRCD/sW9cr159ubm5vbn+mPH4h7FyjARvfa8dCR9u7gXSUPyERMWdDP31C3fP5yl/169+Un+u2WuHUr5ZFNcCZsICxGvx",
+      "id": 5
     }
   ],
   "comments": [
@@ -261,7 +271,7 @@
       }
     },
     {
-      "message": "Отличный сайт",
+      "message": "Хороший сайт",
       "id": 6,
       "rate": 5,
       "user": {
@@ -272,21 +282,7 @@
         "phonenumber": "85165123",
         "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
         "id": 1,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQ4MzY1ODYsImV4cCI6MTcxNDg0MDE4Niwic3ViIjoiMSJ9.WFFU4xhCpfglC6UFo13itJ1p2s1t90b-HGG364T9Jws"
-      }
-    },
-    {
-      "id": 7,
-      "rate": 5,
-      "user": {
-        "email": "kuatbakyt@gmail.com",
-        "name": "Bakyt",
-        "surname": "Kuat",
-        "country": "Africa",
-        "phonenumber": "85165123",
-        "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
-        "id": 1,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQ3NTUwOTQsImV4cCI6MTcxNDc1ODY5NCwic3ViIjoiMSJ9.TLHWh2JVhcuoaLqyjNUpkwI32UddvDC1bYluM0vGJ_0"
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTUxMTczNTAsImV4cCI6MTcxNTEyMDk1MCwic3ViIjoiMSJ9.3k0gO8Yo4_WmhsRyXxJk_DRsvRzDBiBaqf1DYPOPjqc"
       }
     }
   ],

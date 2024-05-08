@@ -62,8 +62,8 @@ let Login = () => {
               }
             </Form.Group>
   
-            <Button variant="primary" onClick={singIn}> Войти</Button>{' '}
-            <Link to='/register'>Зарегистрироваться</Link>
+            <Button variant="primary" className='m-3' onClick={singIn}> Войти</Button>{' '}
+            <Link to='/register' className='m-3'>Зарегистрироваться</Link>
           </Form>
         </div>
       </div>

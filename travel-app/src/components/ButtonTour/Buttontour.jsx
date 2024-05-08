@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import "../../allcss/buttontour.css"
+import React from 'react';
+import "../../allcss/buttontour.css";
 import Form from 'react-bootstrap/Form';
 
 function Buttontour({ toursData, ...props }) {
@@ -47,7 +47,7 @@ function Buttontour({ toursData, ...props }) {
                                 <Form.Control type="text" placeholder="Имя" value={props.newName} ref={newName} onChange={updateNewRequestText} required />
                             </Form.Group>
                             <Form.Group className="mb-3" >
-                                <Form.Control id="validationDefault01" type="number" name='phone' placeholder="Номер телефона" value={props.newPhone} ref={newPhone} onChange={updateNewRequestText} required />
+                                <Form.Control id="validationDefault02" type="number" name='phone' placeholder="Номер телефона" value={props.newPhone} ref={newPhone} onChange={updateNewRequestText} required />
                             </Form.Group>
                             <Form.Select className="mb-3" aria-label="Default select example">
                                 <option>Выберете место</option>

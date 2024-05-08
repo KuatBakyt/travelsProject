@@ -60,9 +60,10 @@
 }
 
 .dropdown-search div:hover {
-  background: #19a4a9;
+  background: #33c1c6;
   color: #ffffff;
   width: 100%;
+
 }
 
 @media screen and (max-width: 600px) {

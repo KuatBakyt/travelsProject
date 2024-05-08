@@ -60,7 +60,7 @@ let Profile = ({ authUser, allCommentsCount, ...props }) => {
       <div className='profile-head'> <h2>Профиль</h2></div>
       <div className='profile-avatar'>
         <img src={
-          authUser
+          authUser.urlImg !== null
             ? (authUser.urlImg)
             : "../img/ava.png"
         } alt="" />

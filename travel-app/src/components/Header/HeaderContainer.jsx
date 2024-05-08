@@ -7,7 +7,8 @@ import { connect } from 'react-redux';
 let mapStateToProps = (state) => {
     return {
         toursPage: getToursSuper(state),
-        orders: getOrders(state)
+        orders: getOrders(state),
+        ...state
     }
 }
 
