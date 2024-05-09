@@ -102,3 +102,16 @@
     font-size: 0 !important;
 }
 
+@media screen and (max-width: 350px) {
+    .skidka-block {
+        height: 200px;
+    }
+
+    .Skidka:hover .slick-prev{
+        top: 80% !important;
+    }
+    
+    .Skidka:hover .slick-next{
+        top: 80% !important;
+    }
+}

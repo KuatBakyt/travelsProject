@@ -34,7 +34,7 @@ function Item({ authUser, ...props }) {
                 </div>
 
                 <div className='animate-items'>
-                    <div><FaPlus size={25} className='icons-item' onClick={addToOrder} /></div>
+                    <div onClick={addToOrder}><FaPlus size={25} className='icons-item'/></div>
                 </div>
 
                 <div className='item-info'>

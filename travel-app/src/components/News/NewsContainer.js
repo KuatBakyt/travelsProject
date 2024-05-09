@@ -33,7 +33,6 @@ const NewsContainer = ({...props}) => {
 
 
     useEffect(() => {
-
         props.togglePreloader(true)
 
         fetch("http://localhost:8080/news_Data")

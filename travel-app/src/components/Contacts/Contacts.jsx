@@ -16,7 +16,7 @@ function Contacts() {
                     <li>
                         <span className="contact-label">Мобильный:</span>
                         <div className="phone-wrap fw-m">
-                            <a data-type="alternative" data-class="" className="clickable-phone phone-77073384949">8 (707) 000-00-00</a>
+                            <a data-type="alternative"  className="clickable-phone phone-77073384949">8 (707) 000-00-00</a>
                         </div>
                     </li>
                 </ul>
@@ -33,7 +33,7 @@ function Contacts() {
                 </ul>
 
                 <div className="city-title">
-                    <img src="/img/clock.png" class="icon" width="25"/>
+                    <img src="/img/clock.png" className="icon" width="25"/>
                     Часы работы
                 </div>
                 <ul className="city-content times-list">
@@ -50,9 +50,8 @@ function Contacts() {
             </div>
 
             <div className='contact-map'>
-                <img src='/img/map.png'/>
+               <img src='/img/map.png'/>
             </div>
-
         </div>
     </div>
     

@@ -39,10 +39,10 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    
+
 }
 
-.ao-infa-1 p b{
+.ao-infa-1 p b {
     color: white;
     font-size: 20px;
 }
@@ -62,7 +62,7 @@
     z-index: 2;
 }
 
-.fix{
+.fix {
     position: relative;
     padding: 70px 0;
 }
@@ -73,7 +73,7 @@
     top: 0;
 }
 
-.ao-sectiontwo-2 img{
+.ao-sectiontwo-2 img {
     max-width: 600px;
 }
 
@@ -84,7 +84,7 @@
     margin-left: 150px;
 }
 
-.ao-img-oiu{
+.ao-img-oiu {
     position: absolute;
     top: 0;
     display: flex;
@@ -103,8 +103,6 @@
 .ao-almatyinfa p {
     font-size: 20px;
 }
-
-
 
 .ao-wrapperthree {
     position: absolute;
@@ -129,24 +127,29 @@
     margin-left: -15%;
 }
 
-.review-scrolldown{
+.review-scrolldown {
     display: flex;
     align-items: center;
     color: #FF7A00;
     cursor: pointer;
 }
- 
-.review-scrolldown:hover, .review-scrolldown:hover .profile-icons{
-    color: #f9983e;
-} 
 
-.review-scrolldown p{
+.review-scrolldown:hover,
+.review-scrolldown:hover .profile-icons {
+    color: #f9983e;
+}
+
+.review-scrolldown p {
     margin: 0;
 }
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 1170px) {
+    .fix{
+        min-height: 500px;
+    }
+
     .ao-sectiontwo-2 {
         display: none;
     }
@@ -154,24 +157,24 @@
     .ao-almatyinfa {
         display: flex;
         flex-direction: column;
-        margin: 0 auto; 
+        margin: 0 auto;
         width: 420px;
     }
 
     .ao-almatyinfa p {
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .ao-almatyinfa p b {
         font-size: 40px
-    } 
+    }
 
-   .ao-infa-main{
-    display: flex;
-    align-content: center;
-    gap: 5%;
-    margin-left: 5%;
-   }
+    .ao-infa-main {
+        display: flex;
+        align-content: center;
+        gap: 5%;
+        margin-left: 5%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -182,23 +185,23 @@
         color: white;
     }
 
-    .ao-infa-main{
+    .ao-infa-main {
         display: flex;
         flex-wrap: wrap;
         margin-left: 15%;
-       }
-    
-       .ao-infa-1 p b{
+    }
+
+    .ao-infa-1 p b {
         color: white;
         font-size: 18px;
     }
-    
+
     .ao-infa-1 p {
         color: white;
         font-size: 14px;
         line-height: 19.5px;
     }
-    
+
     .ao-sectiontwo-1 {
         width: 60%;
         max-height: 400px;
@@ -221,12 +224,53 @@
     }
 
     .ao-almatyinfa p {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     .ao-almatyinfa p b {
         font-size: 36px
-    } 
+    }
 
 }
 
+@media (max-width: 400px) {
+    .fix{
+        min-height: 500px;
+    }
+    .ao-head h2 {
+        font-size: 30px;
+    }
+
+    .ao-sectiontwo-1 {
+        width: 60%;
+        max-height: 400px;
+        margin-left: 0;
+    }
+
+    .ao-sectiontwo-2 {
+        display: none;
+    }
+
+    .ao-almatyinfa {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 245px;
+    }
+
+    .ao-almatyinfa p {
+        font-size: 15px;
+        width: 95%;
+    }
+
+    .ao-almatyinfa p b {
+        font-size: 24px;
+    }
+
+    .ao-infa-main {
+        display: flex;
+        align-content: center;
+        gap: 3%;
+        margin-left: 0;
+    }
+}

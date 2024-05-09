@@ -3,6 +3,7 @@ import Categories from "./Categories";
 import { connect } from "react-redux";
 import { setCategoriesAcAcr } from "../../redux/categoriesReducer";
 import { chooseCategoryAcCr } from "../../redux/toursReducer";
+import { getCategoriesSuper } from "../../redux/Selectors/categoriesSelector";
 
 
 const CategoriesContainer = (props) => {
@@ -29,7 +30,7 @@ const CategoriesContainer = (props) => {
 
 let mapStateToProps = (state) => {
     return {
-        categoriesPage: state.categoriesPage
+        categoriesPage: getCategoriesSuper(state)
     }
 }
 
@@ -43,6 +44,5 @@ let mapDispatchToProps = (dispatch) => {
         }
     }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategoriesContainer)

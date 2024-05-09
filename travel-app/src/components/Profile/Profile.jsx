@@ -60,7 +60,7 @@ let Profile = ({ authUser, allCommentsCount, ...props }) => {
       <div className='profile-head'> <h2>Профиль</h2></div>
       <div className='profile-avatar'>
         <img src={
-          authUser
+          authUser.urlImg !== null
             ? (authUser.urlImg)
             : "../img/ava.png"
         } alt="" />
@@ -130,11 +130,11 @@ let Profile = ({ authUser, allCommentsCount, ...props }) => {
               <Form.Label>Пароль</Form.Label>
               <Form.Control type={eyes ? "password" : "text"} value={props.newPassword} ref={newPassword} onChange={updateUserInfoText} />
               {
-                eyes ? (<span onClick={() => (setEye(false))}>
+                eyes ? (<span className='profile-eye' onClick={() => (setEye(false))}>
                   <FaEye />
                 </span>) :
                   (
-                    <span onClick={() => (setEye(true))}>
+                    <span className='profile-eye' onClick={() => (setEye(true))}>
                       <FaEyeSlash />
                     </span>
                   )

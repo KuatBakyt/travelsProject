@@ -47,14 +47,6 @@ const Search = ({ toursData }) => {
     setShowDropdown(true);
   };
 
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      if (error) {
-        alert("По вашему запросу ничего не найдено");
-      }
-    }
-  };
-
   const handleTourSelect = (tour) => {
     navigate(`/ItemDescription/${tour.id}`);
   };
@@ -69,16 +61,19 @@ const Search = ({ toursData }) => {
           value={searchItem}
           onChange={(e) => setSearchItem(e.target.value)}
           onFocus={inpFocus}
-          onKeyPress={handleKeyPress}
           ref={inputRef}
         />
         {showDropdown && (
           <div className="dropdown-search">
-          {filteredTours.map((tour) => (
+          {
+          error
+          ? (<div>Результаты поиска отсутсвуют</div>)
+          : (filteredTours.map((tour) => (
             <div key={tour.id} onClick={() => handleTourSelect(tour)}>
               {tour.name}
             </div>
-          ))}
+          )))
+          }
         </div>
         )}
       </div>

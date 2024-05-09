@@ -31,8 +31,7 @@ let commentsReducer = (state = initialState, action) => {
                 message: state.newCommentMessage,
                 id: state.comments.length + 1,
                 rate: state.rating,
-                user: JSON.parse(localStorage.getItem("user")),
-                
+                user: JSON.parse(localStorage.getItem("user"))
             }
             fetch("http://localhost:8080/comments", {
                 method: "POST",
@@ -103,8 +102,8 @@ export const setCommentAcAcr = (comments) => {
     return { type: SET_COMMENTS, comments: comments }
 }
 
-export const addCommentActionCreator = () => {
-    return { type: ADD_COMMENT }
+export const addCommentActionCreator = (time) => {
+    return { type: ADD_COMMENT, time: time }
 }
 
 export const updateNewCommentTextAC = (newCommentMessage) => {

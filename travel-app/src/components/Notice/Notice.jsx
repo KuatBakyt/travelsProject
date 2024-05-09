@@ -5,7 +5,7 @@ function Notice() {
   return (
     <div className='notice'>
         <div className='notice-content'>
-            <div class="wrapper">
+            <div className="wrapper">
                 <ul>
                     <li className="facebook">
                         <a href="#" target='blank'>

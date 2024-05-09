@@ -8,7 +8,6 @@ let initialState = {
     toursData: [],
     currentTourse: [],
     orders: [],
-    arr: [],
     isLoad: true
 }
 

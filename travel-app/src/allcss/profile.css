@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.profile-head{
+.profile-head {
     text-align: center;
     padding: 30px;
     color: #ffffff;
@@ -21,7 +21,7 @@
     background: #ffffff;
 }
 
-.profile-foot-details{
+.profile-foot-details {
     text-align: center;
     margin: 100px 0;
 }
@@ -32,24 +32,25 @@
     border-radius: 50%;
     border: 5px solid #FF7A00;
     position: absolute;
-    left: 0; 
-    right: 0; 
+    left: 0;
+    right: 0;
     top: 17%;
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .profile-avatar img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    background: #ffffff;
 }
 
-.profile-titles{
+.profile-titles {
     color: black;
 }
 
-.profile-detail{
+.profile-detail {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -59,7 +60,7 @@
     margin-bottom: 30px;
 }
 
-.profile-detail div{
+.profile-detail div {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -67,13 +68,13 @@
     font-size: 18px;
 }
 
-.profile-detail a{
+.profile-detail a {
     text-decoration: none;
     color: #FF7A00;
     position: relative;
 }
 
-.profile-detail a::after{
+.profile-detail a::after {
     content: "";
     position: absolute;
     left: 10px;
@@ -84,24 +85,52 @@
     transition: .3s ease;
 }
 
-.profile-detail a:hover::after{
+.profile-detail a:hover::after {
     width: 100%;
     transition: .3s ease;
 }
 
-.border-between{
-   width: 3px;
-   height: 35px;
-   background: #FF7A00;
-   border-radius: 10% ;
+.border-between {
+    width: 3px;
+    height: 35px;
+    background: #FF7A00;
+    border-radius: 10%;
 }
 
-.profile-icons{
+.profile-icons {
     color: #FF7A00;
     font-size: 25px !important;
     margin: 10px;
 }
 
-.profile-actions button{
-  margin: 10px;
+.profile-actions button {
+    margin: 10px;
+}
+
+.profile-eye {
+    top: 94.5%;
+    position: absolute;
+    right: 10%;
+}
+
+@media screen and (max-width: 450px) {
+    .profile-detail {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .profile-detail .border-between {
+        display: none;
+    }
+    .profile-foot-details {
+        text-align: center;
+        margin: 100px 0;
+        margin-bottom: 50px;
+    }
+
 }

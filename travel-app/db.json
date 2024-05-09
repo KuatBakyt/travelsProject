@@ -98,7 +98,6 @@
       "img": "https://morena.kz/foto/allfoto/tshan/tsh37.jpg",
       "category": "mountains",
       "description": "Крупнейший в мире высокогорный спортивный комплекс «Медеу» расположен в одноименном урочище Заилийского Алатау вблизи Алматы на высоте около 1700 метров над уровнем моря. От разрушительного воздействия селевых потоков «Медеу» защищает одноименная плотина, построенная в конце 1960-х годов и расположенная к югу от катка. Специальное водовместилище позволяет удерживать здесь около 6 миллионов кубических метров воды, а на лестнице, ведущей к плотине и состоящей из 842 ступеней, регулярно проводятся соревнования по восхождению на скорость.",
-      "likes": [],
       "id": 1
     },
     {
@@ -111,7 +110,6 @@
       "img": "https://www.advantour.com/img/kazakhstan/tours/almaty-medeo-tour.jpg",
       "category": "mountains",
       "description": "Крупнейший в мире высокогорный спортивный комплекс «Медеу» расположен в одноименном урочище Заилийского Алатау вблизи Алматы на высоте около 1700 метров над уровнем моря. От разрушительного воздействия селевых потоков «Медеу» защищает одноименная плотина, построенная в конце 1960-х годов и расположенная к югу от катка. Специальное водовместилище позволяет удерживать здесь около 6 миллионов кубических метров воды, а на лестнице, ведущей к плотине и состоящей из 842 ступеней, регулярно проводятся соревнования по восхождению на скорость.",
-      "likes": [],
       "id": 2
     },
     {
@@ -124,7 +122,6 @@
       "img": "https://ticketon.kz/media/upload/42873u54364_photo_341626.jpeg",
       "category": "medeo",
       "description": "Крупнейший в мире высокогорный спортивный комплекс «Медеу» расположен в одноименном урочище Заилийского Алатау вблизи Алматы на высоте около 1700 метров над уровнем моря. От разрушительного воздействия селевых потоков «Медеу» защищает одноименная плотина, построенная в конце 1960-х годов и расположенная к югу от катка. Специальное водовместилище позволяет удерживать здесь около 6 миллионов кубических метров воды, а на лестнице, ведущей к плотине и состоящей из 842 ступеней, регулярно проводятся соревнования по восхождению на скорость.",
-      "likes": [],
       "id": 3
     },
     {
@@ -137,21 +134,10 @@
       "img": "https://www.advantour.com/img/kazakhstan/tours/lake-issyk-tour.jpg",
       "category": "lakes",
       "description": "Крупнейший в мире высокогорный спортивный комплекс «Медеу» расположен в одноименном урочище Заилийского Алатау вблизи Алматы на высоте около 1700 метров над уровнем моря. От разрушительного воздействия селевых потоков «Медеу» защищает одноименная плотина, построенная в конце 1960-х годов и расположенная к югу от катка. Специальное водовместилище позволяет удерживать здесь около 6 миллионов кубических метров воды, а на лестнице, ведущей к плотине и состоящей из 842 ступеней, регулярно проводятся соревнования по восхождению на скорость.",
-      "likes": [],
       "id": 4
     }
   ],
   "users": [
-    {
-      "email": "kuatbakyt@gmail.com",
-      "password": "$2a$10$iX/0h0dhdElMMkmoEcPojOrjTF96AUJ1fF.V4RQD/yqVrM2uo4tLq",
-      "name": "Bakyt",
-      "surname": "Kuat",
-      "country": "Africa",
-      "phonenumber": "85165123",
-      "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
-      "id": 1
-    },
     {
       "email": "nechad@gmail.com",
       "name": "sigma",
@@ -159,70 +145,15 @@
       "country": "Dania",
       "phonenumber": "8777555 666 3",
       "urlImg": "https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg",
-      "id": 2,
+      "id": 1,
       "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdpZ2dhQGdtYWlsLmNvbSIsImlhdCI6MTcxNDM4ODg0MiwiZXhwIjoxNzE0MzkyNDQyLCJzdWIiOiIyIn0.isByuuWkIwzx283jpGqZQsEadz0DucvM9nEHpk1F_Qw",
       "password": "$2a$10$3cB8Xpg9xlElTzrFma9dke0zKwNEukAeALWMo/EXszchPL43bgSeO"
-    },
-    {
-      "email": "fornado@gmail.com",
-      "password": "$2a$10$RCbj/Zyl/sEtTD13JwKGZ.FBfk9Q.i04fFvsG8V9k1mpTjBWZiFu.",
-      "name": "Froman",
-      "surname": "Bede",
-      "country": "Italy",
-      "phonenumber": "9666 2222 444",
-      "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnXtCWefCbmO3j9UUMvEUmsKFD1it6zNSzFVWwbDK01A&s",
-      "id": 3
-    },
-    {
-      "email": "lion@gmail.com",
-      "password": "$2a$10$RFG7lY8EDGsid0xHzY8mX..dnDO0XR31ASDyhSULY0l9DkFe0Q39.",
-      "name": "King",
-      "surname": "Me",
-      "country": "Tarzania",
-      "phonenumber": "8777 555 666 3",
-      "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIagUEwBajWfkmU9tBFk3uXKldnxnoFfPfzQ&s",
-      "id": 4
-    },
-    {
-      "email": "welcome@gmail.com",
-      "password": "$2a$10$d1yaVEW6IFwyCzR71yi99.Sphi4nmbc0VClC2eqGwljvtF2/xiPZq",
-      "name": "New",
-      "surname": "Welcome",
-      "country": "Denmark",
-      "phonenumber": "788888888",
-      "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ59QXlz2c76OFJNpeHlVVLOfFlDGnyB3CSwUanklzuBShBfivViiiRvcMMOFbsooD-cfI&usqp=CAU",
-      "id": 5
-    },
-    {
-      "email": "gaga@mail.ru",
-      "password": "$2a$10$cc6R.DP7HKSqCNBXGEjK7eMlDjV1Nl4DDpLAUrMA6Ia0PvPBALA0O",
-      "name": "Lady",
-      "surname": "Gaga",
-      "country": "USA",
-      "phonenumber": "+8888888",
-      "urlImg": "https://i.insider.com/6241c2da093c4d0018053847?width=700",
-      "id": 6
     }
   ],
   "comments": [
     {
-      "message": "bla bla",
-      "id": 1,
-      "rate": 4,
-      "user": {
-        "email": "kuatbakyt@gmail.com",
-        "name": "Bakyt",
-        "surname": "Kuat",
-        "country": "Kazahs",
-        "phonenumber": "87476202879",
-        "urlImg": "",
-        "id": 1,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTM0MjMyMTcsImV4cCI6MTcxMzQyNjgxNywic3ViIjoiMSJ9.bHXAe1-FbQ5G60upy3RuGAKUtnxm_XTwfBdht3E9Two"
-      }
-    },
-    {
       "message": "rrr",
-      "id": 2,
+      "id": 1,
       "rate": 5,
       "user": {
         "email": "kkk@gmail.com",
@@ -237,7 +168,7 @@
     },
     {
       "message": "bla bla",
-      "id": 3,
+      "id": 2,
       "rate": 5,
       "user": {
         "email": "ererw@gmail.com",
@@ -252,7 +183,7 @@
     },
     {
       "message": "rrr",
-      "id": 4,
+      "id": 3,
       "rate": 3,
       "user": {
         "email": "werer@gmail.com",
@@ -267,7 +198,7 @@
     },
     {
       "message": "bla bla",
-      "id": 5,
+      "id": 4,
       "rate": 3,
       "user": {
         "email": "fewewr@gmail.com",
@@ -282,7 +213,7 @@
     },
     {
       "message": "rrr",
-      "id": 6,
+      "id": 5,
       "rate": 4,
       "user": {
         "email": "thrtyty@gmail.com",
@@ -296,9 +227,9 @@
       }
     },
     {
-      "message": "капкеңе",
-      "id": 7,
-      "rate": 1,
+      "message": "Хороший сайт",
+      "id": 6,
+      "rate": 5,
       "user": {
         "email": "kuatbakyt@gmail.com",
         "name": "Bakyt",
@@ -307,12 +238,12 @@
         "phonenumber": "85165123",
         "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ca1zPiT9sM_HSD4VaDW5SeXqMJQ4yD50WK6yT1ATYed-O7QmIGaSKk2JCg&s",
         "id": 1,
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTQ2NTgxNjYsImV4cCI6MTcxNDY2MTc2Niwic3ViIjoiMSJ9.6_3Vue82MTo7or5r845jzcBgx-e2iYgI8OXDT2tLZrE"
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt1YXRiYWt5dEBnbWFpbC5jb20iLCJpYXQiOjE3MTUxMTczNTAsImV4cCI6MTcxNTEyMDk1MCwic3ViIjoiMSJ9.3k0gO8Yo4_WmhsRyXxJk_DRsvRzDBiBaqf1DYPOPjqc"
       }
     },
     {
       "message": "классный сайт!!!",
-      "id": 8,
+      "id": 7,
       "rate": 5,
       "user": {
         "email": "kent@gmail.com",
@@ -327,43 +258,12 @@
   ],
   "requests": [
     {
-      "email": "",
-      "name": "",
-      "phone": "",
-      "place": "",
-      "explain": "",
+      "email": "kuatbakyt@gmail.com",
+      "name": "Bakyt",
+      "phone": "87476202879",
+      "place": "Озеро Иссык с горами Алма-Аты в мини-группе",
+      "explain": "Вместе с семьей",
       "id": 1
-    },
-    {
-      "email": "",
-      "name": "",
-      "phone": "",
-      "place": "",
-      "explain": "",
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "email": "",
-      "name": "",
-      "phone": "",
-      "place": "",
-      "explain": "",
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
     }
   ]
 }

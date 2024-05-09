@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import Items from "./Items"
 import { connect } from "react-redux"
 import { addToOrdersAcCr, setToursAcCr, togglePreloaderActionCreater } from "../../redux/toursReducer"
-import { getToursSuper } from "../../redux/toursSelector"
+import { getCurrentTourse, getIsLoad, getToursSuper  } from "../../redux/Selectors/toursSelector"
 
 const ItemsContainer = ({ authUser, ...props }) => {
 
@@ -33,6 +33,8 @@ let MapStateToProps = (state) => {
   let authUser = JSON.parse(localStorage.getItem("user"))
   return {
     toursPage: getToursSuper(state),
+    currentTourse: getCurrentTourse(state),
+    isLoad: getIsLoad(state),
     authUser
   }
 }

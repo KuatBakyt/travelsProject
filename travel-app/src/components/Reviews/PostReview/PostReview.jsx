@@ -21,7 +21,7 @@ function PostReview({authUser, ...props}) {
         <div className="review-top">
           <div className="review-profile">
             <div className="review-img">
-              <img src={props.user.urlImg == "" ? "https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg"
+              <img src={props.user.urlImg == null || props.user.urlImg == "" ? "../img/ava.png"
                 :
                 (props.user.urlImg)
               } />

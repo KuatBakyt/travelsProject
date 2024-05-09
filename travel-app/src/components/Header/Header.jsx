@@ -106,7 +106,12 @@ function Header(props) {
                                 }
 
                                 {
-                                    currentUser != null ? (<NavLink to={"/profile"}><div className='profile'><img src={currentUser.urlImg} alt="" /></div></NavLink>)
+                                    currentUser != null ? (<NavLink to={"/profile"}><div className='profile'><img src={
+                                        currentUser.urlImg != null 
+                                        ? currentUser.urlImg 
+                                        : "../img/ava.png"
+                                    
+                                    } alt="" /></div></NavLink>)
                                         :
                                         (<NavDropdown title="Логин" id="basic-nav-dropdown">
                                             <NavDropdown.Item onClick={redirectLogin}>Логин</NavDropdown.Item>

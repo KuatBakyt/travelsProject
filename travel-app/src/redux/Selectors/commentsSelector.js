@@ -1,9 +1,12 @@
 import { createSelector } from "reselect";
 
+export const getIsLoad =(state) => {
+    return state.commentsPage.isLoad
+}
+
 export const getCommentsSuper = createSelector(
     (state) => state.commentsPage,
     (commentsPage) => {
-        console.log("222");
         return commentsPage;
     }
 )

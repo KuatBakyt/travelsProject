@@ -1,5 +1,5 @@
 .pay-content{
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .pay-order{
@@ -69,6 +69,8 @@ text-align: center;
 .pay-cards div{
     width: 120px;
     height: 35px;
+    margin: 5px;
+    cursor: pointer;
 }
 
 .pay-cards div img{

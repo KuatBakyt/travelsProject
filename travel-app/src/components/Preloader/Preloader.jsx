@@ -6,7 +6,7 @@ let PreLoader = () => {
 
     return (
         <div className="preloader">
-            <div class="loader">
+            <div className="loader">
                 <div></div>
                 <div></div>
                 <div></div>

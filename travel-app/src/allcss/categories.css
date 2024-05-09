@@ -1,8 +1,9 @@
 .categories{
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    max-width: 600px;
     margin: 30px 0;
+    flex-wrap: wrap;
 }
 
 .categories div{
@@ -14,4 +15,57 @@
     text-align: center;
     line-height: 40px;
     cursor: pointer;
+    margin: 10px;
+}
+
+.categories div:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+    .categories{
+        display: flex;
+        justify-content: space-between;
+        max-width: 400px;
+        margin: 20px 0;
+        margin-left: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .categories div{
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        background: #FF7A00;
+        color: #ffffff;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .categories{
+        display: flex;
+        justify-content: space-between;
+        max-width: 400px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+    
+    .categories div{
+        width: 80px;
+        height: 35px;
+        border-radius: 10px;
+        background: #FF7A00;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+        cursor: pointer;
+        margin: 5px;
+        font-size: 15px;
+    }
+    
 }

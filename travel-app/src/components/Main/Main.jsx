@@ -6,9 +6,11 @@ import SearchContainer from '../Search/SearchContainer'
 import Carousel from 'react-bootstrap/Carousel';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import ButtonTourContainer from '../ButtonTour/ButtonTourContainer';
-
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 
 function Main() {
+  const [alert, setAlert] = useState(false)
   const [show, setShow] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -21,8 +23,17 @@ function Main() {
 
   return (
     <>
-      <div>
-
+    {
+      alert 
+    ? <Alert variant="success" dismissible>
+        <Alert.Heading>Уведомление</Alert.Heading>
+        <p>
+          Ваша заявка успешно отправлена! Ожидайте звонка
+        </p>
+        <Button onClick={() => setAlert(false)}>Ok</Button>
+      </Alert>
+      : <span></span>
+    }
         <Carousel activeIndex={index} onSelect={handleSelect}>
           <Carousel.Item>
             <div className='main-bg-f'>
@@ -79,10 +90,9 @@ function Main() {
           <Offcanvas.Header closeButton>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <ButtonTourContainer handleClose={handleClose}/>
+            <ButtonTourContainer handleClose={handleClose} setAlert={setAlert}/>
           </Offcanvas.Body>
         </Offcanvas>
-      </div>
     </>
   )
 }

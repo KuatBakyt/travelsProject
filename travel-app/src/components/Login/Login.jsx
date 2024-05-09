@@ -63,6 +63,7 @@ let Login = () => {
                   )
               }
             </Form.Group>
+
             {errorMessage && <div className={`alert alert-danger m-3 ${s.alert}`}>{errorMessage}</div>}
             <Button variant="primary" onClick={singIn}> Войти</Button>{' '}
             <Link to='/register'>Зарегистрироваться</Link>

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Reviews from './Reviews';
 import { deleteCommentAcAcr, setCommentAcAcr, togglePreloaderActionCreater } from '../../redux/commentsReducer';
 import withAuthRedirect from '../HOC/withAuthTedirect';
-import { getCommentsSuper } from '../../redux/commentsSelector';
+import { getCommentsSuper, getIsLoad } from '../../redux/Selectors/commentsSelector'
 
 const ReviewsContainer = ({ authUser, ...props }) => {
   let dataArr = props.commentsPage.comments
@@ -51,13 +51,14 @@ const ReviewsContainer = ({ authUser, ...props }) => {
       })
   }, []);
 
-  return <Reviews {...props} authUser={authUser}  prePage={prePage} changeCPage={changeCPage} nextPage={nextPage} numbers={numbers} records={records} currentPage={currentPage}/>
+  return <Reviews {...props} authUser={authUser} prePage={prePage} changeCPage={changeCPage} nextPage={nextPage} numbers={numbers} records={records} currentPage={currentPage} />
 }
 
 let mapStateToProps = (state) => {
   let authUser = JSON.parse(localStorage.getItem("user"))
   return {
     commentsPage: getCommentsSuper(state),
+    isLoad: getIsLoad(state),
     authUser,
     ...state
   }
@@ -73,7 +74,7 @@ let mapDispatchToProps = (dispatch) => {
     },
     togglePreloader: (status) => {
       dispatch(togglePreloaderActionCreater(status))
-  }
+    }
   }
 }
 let AuthRedirect = withAuthRedirect(ReviewsContainer)
