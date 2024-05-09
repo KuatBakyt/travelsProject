@@ -10,7 +10,10 @@ function PayOrder({...props}) {
         <>
                <li className='pay-item'>
                 <div className='pay-img'><img src={props.item.img} alt="" /></div>
+                <div>
                 <div className='pay-name'>{props.item.name}</div>
+                <b>{props.item.price} T</b>
+                </div>
                 <div> <FaTrash className="delete_icon" size={30} onClick={deleteOrder}/></div>
                </li>
         </>

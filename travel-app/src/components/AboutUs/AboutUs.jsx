@@ -251,7 +251,7 @@ function AboutUs() {
         <Modal.Header closeButton>
           <Modal.Title>Внимание</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Зайдите в аккаунт, чтобы перейти к отзывам </Modal.Body>
+        <Modal.Body>Войдите в аккаунт, чтобы перейти к отзывам </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Отмена

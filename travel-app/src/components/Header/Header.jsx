@@ -14,7 +14,7 @@ function Header(props) {
 
     function redirectDescription() {
         navigate(`/pay`)
-       
+        setCartOpen(!cartOpen)
     }
     function redirectLogin() {
         navigate(`/login`)

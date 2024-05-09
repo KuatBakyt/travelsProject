@@ -1,8 +1,9 @@
 import React from 'react'
 import '../../allcss/footer.css'
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
- 
+
     return (
         <div className='footer-main'>
             <div className='container'>
@@ -14,15 +15,15 @@ function Footer() {
                             <div className='social-sets'>
                                 <a href="#"><img src="../img/twitter.png" alt="twitter" /></a>
                                 <a href="#"><img src="../img/insta.png" alt="insta" /></a>
-                                <a href="#"> <img src="../img/facebook.png" alt="facebook" /></a> 
+                                <a href="#"> <img src="../img/facebook.png" alt="facebook" /></a>
                             </div>
                         </div>
                     </div>
                     <div className='support'>
                         <h5>Поддержка</h5>
-                        <a href="#">Блог</a>
-                        <a href="#">Помощь</a>
-                        <a href="#">Наши контакты</a>
+                        <NavLink to="/contacts" > Контакты </NavLink>
+                        <NavLink to="/about" > О нас </NavLink>
+                        <NavLink to="/news" > Новости </NavLink>
                     </div>
                     <div>
                         <h5>Связаться с нами</h5>

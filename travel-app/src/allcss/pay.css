@@ -37,7 +37,11 @@
 
 .pay-order li .pay-name{
     font-size: 20px;
-    max-width: 400px;
+    max-width: 360px;
+}
+
+.pay-order li b{
+    color: #ff6600;
 }
 
 .pay-order .delete_icon{

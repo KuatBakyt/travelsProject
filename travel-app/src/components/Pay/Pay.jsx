@@ -18,8 +18,8 @@ function Pay({ orders, ...props }) {
         </ol>
 
         <div className='pay-action'>
-          <p className='sum'>Сумма: {new Intl.NumberFormat().format(sum)} T </p>
-          <h3>Оплата</h3>
+          <p className='sum m-3'>Сумма: {new Intl.NumberFormat().format(sum)} T </p>
+          <h3>Оплата:</h3>
           <div className='pay-cards'>
             <div><img src="../img/visa.png" alt="" /></div>
             <div><img src="../img/alipay.png" alt="" /></div>
